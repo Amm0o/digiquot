@@ -1,0 +1,97 @@
+$SolidGreen: #56ab2f;
+$ButtonsOrange: #e2a61e;
+$SimulatorResults: #f37335;
+$cinza: #f1f1f1;
+$Black: #333333;
+$LightGrey: #f4f4f4;
+$Gradient: linear-gradient(
+  90deg,
+  rgba(86, 171, 47, 1) 0%,
+  rgba(168, 224, 99, 1) 100%
+);
+$font: 'Raleway', sans-serif;
+
+.last-section {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+}
+
+.lastStep {
+  height: 100%;
+
+  background: url('../imgs/main-image-simulator.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+  position: relative;
+  bottom: 10rem;
+  padding-left: 6%;
+  padding-right: 6%;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center !important;
+  align-items: center;
+}
+
+#finish-title {
+  width: 80%;
+  border-bottom: 1px solid white;
+  color: white;
+  font-size: 4rem;
+  font-family: $font;
+  text-align: center;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+#finish-subtitle {
+  color: white;
+  font-size: 3rem;
+  font-family: $font;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  text-align: center;
+}
+
+#finish-subsubtitle {
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: $font;
+  padding-bottom: 2rem;
+  color: white;
+}
+
+.orange-big-button {
+  width: 460px;
+  height: 50px;
+  text-align: center;
+  background-color: $ButtonsOrange;
+  border: 1px solid black;
+  border: none;
+  border-radius: 32px;
+  color: white;
+  font-family: $font;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.line {
+  width: 110%;
+  height: 1px;
+  background-color: white;
+  margin-top: 4rem;
+}
+
+.lorem {
+  font-family: $font;
+  color: white;
+  padding-top: 1rem;
+  span {
+    padding-right: 5px;
+  }
+}

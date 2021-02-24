@@ -1,0 +1,238 @@
+const Website = require('../models/websiteModel');
+const Logotipo = require('../models/logoModel');
+const onlineStore = require('../models/onlineStoreModel');
+const socialNetwork = require('../models/socialNetworksModel');
+const seo = require('../models/seoModel');
+const googleAds = require('../models/googleAdsModel');
+const cyber = require('../models/cyberModel');
+const sendMail = require('../services/sendMail');
+const agency = require('../models/agencyModel');
+const freelancer = require('../models/freeLancerModel');
+
+async function sendEmails(inComingService, free, age, mail) {
+  // Free lancer email
+  if (age > 0) {
+    const emails = await agency.find({}, 'email -_id');
+    let emailArr = [];
+    emails.forEach(element => {
+      emailArr.push(element.email);
+    });
+    mail(inComingService, emailArr);
+  }
+  // Agency Email
+  if (free > 0) {
+    const emailsFree = await freelancer.find({}, 'email -_id');
+    let emailArrFree = [];
+    emailsFree.forEach(element => {
+      emailArrFree.push(element.email);
+    });
+    mail(inComingService, emailArrFree);
+  }
+}
+
+exports.addService = async (req, res) => {
+  console.log('I got a request! 😎');
+  if (req.params.service === 'Website') {
+    let inComingService = {
+      name: req.body.client.name,
+      phone: +req.body.client.phone,
+      email: req.body.client.email,
+      message: req.body.client.message,
+      pages: +req.body.website.pages,
+      form: req.body.website.form,
+      cert: req.body.website.cert,
+      domainHosting: req.body.website.domainHosting,
+      emails: req.body.website.emails,
+      langs: +req.body.website.langs,
+    };
+
+    try {
+      const newWebSite = await Website.create(inComingService);
+
+      res.status(201).json({
+        status: 'success',
+        data: newWebSite,
+      });
+      console.log(newWebSite);
+      //Send Email
+      sendEmails(
+        inComingService,
+        req.body.freelancer.quant,
+        req.body.agency.quant,
+        sendMail.Website
+      );
+      //END SEND EMAIL
+    } catch (err) {
+      console.log(err);
+      res.status(400).json({
+        status: 'failed',
+        message: 'Invalid Data sent!🖕',
+      });
+    }
+  } else if (req.params.service === 'Logotipo') {
+    let inComingService = {
+      name: req.body.client.name,
+      phone: +req.body.client.phone,
+      email: req.body.client.email,
+      message: req.body.client.message,
+      tipologia: req.body.logo.tipologia,
+    };
+
+    try {
+      const newLogotipo = await Logotipo.create(inComingService);
+      res.status(201).json({
+        status: 'success',
+        data: newLogotipo,
+      });
+      console.log(newLogotipo);
+      // Send Mail
+      sendEmails(
+        inComingService,
+        req.body.freelancer.quant,
+        req.body.agency.quant,
+        sendMail.Logotipo
+      );
+      // End Send Mail
+    } catch (err) {
+      console.log(err);
+      res.status(400).json({
+        status: 'failed',
+        message: 'Invalid Data sent!🖕',
+      });
+    }
+  } else if (req.params.service === 'Online Store') {
+    let inComingService = {
+      name: req.body.client.name,
+      phone: +req.body.client.phone,
+      email: req.body.client.email,
+      message: req.body.client.message,
+      form: req.body.onlineStore.form,
+      cert: req.body.onlineStore.cert,
+      domainHosting: req.body.onlineStore.domainHosting,
+      emails: req.body.onlineStore.emails,
+      langs: +req.body.onlineStore.langs,
+      payment: req.body.onlineStore.payment,
+      billing: req.body.onlineStore.billing,
+    };
+    try {
+      const newOnlineStore = await onlineStore.create(inComingService);
+      res.status(201).json({
+        status: 'success',
+        data: newOnlineStore,
+      });
+      console.log(newOnlineStore);
+      const arr = [
+        'angelo.oliveira@pelicanbay.pt',
+        'angelo.oliveira@cyber-security.pt',
+      ];
+      // Send Mail
+      sendMail.OnlineStore(inComingService, arr);
+      // End Send Mail
+    } catch (err) {
+      console.log(err);
+      res.status(400).json({
+        status: 'failed',
+        message: 'Invalid Data sent!🖕',
+      });
+    }
+  } else if (req.params.service === 'Social Networks') {
+    let inComingService = {
+      name: req.body.client.name,
+      phone: +req.body.client.phone,
+      email: req.body.client.email,
+      message: req.body.client.message,
+      socialNetworks: +req.body.socialNetwork.socialNetworks,
+      posts: +req.body.socialNetwork.posts,
+      interaction: req.body.socialNetwork.interaction,
+      publicityManagment: req.body.socialNetwork.publicityManagment,
+    };
+    try {
+      const newSocialNetwork = await socialNetwork.create(inComingService);
+      res.status(201).json({
+        status: 'success',
+        data: newSocialNetwork,
+      });
+      console.log(newSocialNetwork);
+    } catch (err) {
+      console.log(err);
+      res.status(400).json({
+        status: 'failed',
+        message: 'Invalid Data sent!🖕',
+      });
+    }
+  } else if (req.params.service === 'Google SEO') {
+    let inComingService = {
+      name: req.body.client.name,
+      phone: +req.body.client.phone,
+      email: req.body.client.email,
+      message: req.body.client.message,
+      revision: req.body.seo.revision,
+      improvement: req.body.seo.improvement,
+      contentCreation: req.body.seo.contentCreation,
+      langs: +req.body.seo.langs,
+    };
+    try {
+      const newGoogleSeo = await seo.create(inComingService);
+      res.status(201).json({
+        status: 'success',
+        data: newGoogleSeo,
+      });
+      console.log(newGoogleSeo);
+    } catch (err) {
+      console.log(err);
+      res.status(400).json({
+        status: 'failed',
+        message: 'Invalid Data sent!🖕',
+      });
+    }
+  } else if (req.params.service === 'Google Ads') {
+    let inComingService = {
+      name: req.body.client.name,
+      phone: +req.body.client.phone,
+      email: req.body.client.email,
+      message: req.body.client.message,
+      countries: +req.body.googleAds.countries,
+      management: req.body.googleAds.management,
+      reports: req.body.googleAds.reports,
+    };
+    try {
+      const newGoogleAds = await googleAds.create(inComingService);
+      res.status(201).json({
+        status: 'success',
+        data: newGoogleAds,
+      });
+      console.log(newGoogleAds);
+    } catch (err) {
+      console.log(err);
+      res.status(400).json({
+        status: 'failed',
+        message: 'Invalid Data sent!🖕',
+      });
+    }
+  } else if (req.params.service === 'Cyber Security') {
+    let inComingService = {
+      name: req.body.client.name,
+      phone: +req.body.client.phone,
+      email: req.body.client.email,
+      message: req.body.client.message,
+      secCert: req.body.cyber.secCert,
+      pentesting: req.body.cyber.pentesting,
+      renew: req.body.cyber.renew,
+      simulate: req.body.cyber.simulate,
+    };
+    try {
+      const newCyber = await cyber.create(inComingService);
+      res.status(201).json({
+        status: 'success',
+        data: newCyber,
+      });
+      console.log(newCyber);
+    } catch (err) {
+      console.log(err);
+      res.status(400).json({
+        status: 'failed',
+        message: 'Invalid Data sent!🖕',
+      });
+    }
+  }
+};

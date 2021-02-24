@@ -1,0 +1,91 @@
+<div class="selection website hide">
+  <h1 class="title">3º <%=translation.step%>: Website</h1>
+  <h2 class="black-subtitle">
+    <%=translation.chose%> <b>website</b> <%=translation.asService%>:
+  </h2>
+
+  <div class="wrapper-column">
+    <div>
+      <select
+        class="choices"
+        name="numero-paginas-website"
+        id="numero-paginas-website"
+      >
+        <option class="hide" value="" disabled selected>
+          <%=translation.pages%> ?
+        </option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="outro"><%=translation.outro%></option>
+      </select>
+      <select
+        class="choices"
+        name="contact-form-website"
+        id="contact-form-website"
+      >
+        <option class="hide" value="" disabled selected>
+          <%=translation.formContact%> ?
+        </option>
+        <option value="yes"><%=translation.yes%></option>
+        <option value="no"><%=translation.no%></option>
+        <option value="outro"><%=translation.outro%></option>
+      </select>
+    </div>
+    <div>
+      <select class="choices" name="sec-cert-website" id="sec-cert-website">
+        <option class="hide" value="" disabled selected>
+          <%=translation.secCert%> ?
+        </option>
+        <option value="sim"><%=translation.yes%></option>
+        <option value="não"><%=translation.no%></option>
+        <option value="outro"><%=translation.outro%></option>
+      </select>
+      <select
+        class="choices"
+        name="domain-hosting-website"
+        id="domain-hosting-website"
+      >
+        <option class="hide" value="" disabled selected>
+          <%=translation.dominio%> ?
+        </option>
+        <option value="yes"><%=translation.yes%></option>
+        <option value="no"><%=translation.no%></option>
+        <option value="other"><%=translation.outro%></option>
+      </select>
+    </div>
+    <div>
+      <select class="choices" name="emails-website" id="emails-website">
+        <option class="hide" value="" disabled selected>
+          <%=translation.emails%>?
+        </option>
+        <option value="sim"><%=translation.yes%></option>
+        <option value="não"><%=translation.no%></option>
+        <option value="outro"><%=translation.outro%></option>
+      </select>
+      <select class="choices" name="langs-website" id="langs-website">
+        <option class="hide" value="" disabled selected>
+          <%=translation.linguas%> ?
+        </option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="outro"><%=translation.outro%></option>
+      </select>
+    </div>
+  </div>
+
+  <h3 class="micro-title-black"><%=translation.click%>:</h3>
+  <div class="continue-section">
+    <button id="continuar-step-3-website" class="continuar">
+      <%=translation.continuar%>
+    </button>
+    <button id="anterior-step-3-website" class="anterior">
+      <%=translation.previous%>
+    </button>
+  </div>
+</div>

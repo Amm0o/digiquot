@@ -1,0 +1,126 @@
+@media (max-width: 1325px) {
+  body {
+    overflow-x: hidden !important;
+  }
+
+  #catch-phrase {
+    width: 80%;
+  }
+  #simulator-subtitle {
+    font-size: 1.5rem !important;
+  }
+
+  #simulator-title {
+    font-size: 1.5rem !important;
+  }
+  .services {
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  .white-button {
+    min-width: 100px;
+  }
+  .section-horizontal {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .column-img {
+    align-items: center;
+    width: 90%;
+    padding-right: 0;
+    p {
+      width: 90%;
+    }
+    h1 {
+      text-align: center;
+      width: 90%;
+    }
+  }
+  .column {
+    h1 {
+      text-align: center;
+      width: 90%;
+    }
+    align-items: center;
+    width: 90%;
+    padding-right: 0;
+    p {
+      width: 90%;
+    }
+  }
+
+  .green-section {
+    flex-direction: column;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    align-items: center;
+    height: 900px;
+  }
+  .vertical-block {
+    bottom: 0;
+  }
+
+  .h2 {
+    text-align: center;
+    padding-bottom: 2rem;
+  }
+  .row {
+    flex-direction: column;
+    padding-right: 0;
+  }
+
+  .links {
+    flex-direction: column;
+    align-items: flex-start;
+    ul {
+      padding-bottom: 2rem;
+    }
+  }
+
+  .tracker {
+    display: none;
+  }
+
+  .selection {
+    width: 100%;
+  }
+
+  .big-input-field {
+    width: 300px;
+    padding-left: 9%;
+  }
+
+  .small-input-field {
+    padding-left: 9%;
+  }
+  .extraInfo-text {
+    width: 100%;
+  }
+
+  .proposals {
+    flex-direction: column;
+  }
+
+  .agency {
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  .freeLancer {
+    align-items: center;
+  }
+
+  .simulator {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+  #budgets {
+    padding-top: 0;
+  }
+}

@@ -1,0 +1,58 @@
+<div class="selection ads hide">
+  <h1 class="title">3º <%=translation.step%>: Google Ads</h1>
+  <h2 class="black-subtitle">
+    <%=translation.chose%> <b>Google Ads</b> <%=translation.asService%>:
+  </h2>
+
+  <div class="wrapper-column">
+    <div>
+      <select
+        class="choices"
+        name="countries-google-ads"
+        id="countries-google-ads"
+      >
+        <option class="hide" value="" disabled selected>
+          <%=translation.implementCountries%>?
+        </option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="other"><%=translation.outro%></option>
+      </select>
+      <select
+        class="choices"
+        name="monthly-management-google-ads"
+        id="monthly-management-google-ads"
+      >
+        <option class="hide" value="" disabled selected>
+          <%=translation.gestaoMensal%> ?
+        </option>
+        <option value="yes"><%=translation.yes%></option>
+        <option value="no"><%=translation.no%></option>
+        <option value="other"><%=translation.outro%></option>
+      </select>
+    </div>
+    <div>
+      <select class="choices" name="report-google-ads" id="report-google-ads">
+        <option class="hide" value="" disabled selected>
+          <%=translation.relatorioMensal%>?
+        </option>
+        <option value="yes"><%=translation.yes%></option>
+        <option value="no"><%=translation.no%></option>
+        <option value="other"><%=translation.outro%></option>
+      </select>
+    </div>
+  </div>
+
+  <h3 class="micro-title-black"><%=translation.click%>:</h3>
+  <div class="continue-section">
+    <button id="continuar-step-3-google-ads" class="continuar">
+      <%=translation.continuar%>
+    </button>
+    <button id="anterior-step-3-google-ads" class="anterior">
+      <%=translation.previous%>
+    </button>
+  </div>
+</div>

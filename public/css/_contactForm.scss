@@ -1,0 +1,68 @@
+$SolidGreen: #56ab2f;
+$ButtonsOrange: #e2a61e;
+$SimulatorResults: #f37335;
+$cinza: #f1f1f1;
+$Black: #333333;
+$LightGrey: #f4f4f4;
+$Gradient: linear-gradient(
+  90deg,
+  rgba(86, 171, 47, 1) 0%,
+  rgba(168, 224, 99, 1) 100%
+);
+$font: 'Raleway', sans-serif;
+.big-input-field {
+  width: 620px;
+  height: 50px;
+  border: 0.8px solid #c9c9c9;
+  border-radius: 8px;
+  color: black;
+  font-family: $font;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  padding-left: 6%;
+}
+
+.small-input-field {
+  width: 300px;
+  height: 50px;
+  border: 0.8px solid #c9c9c9;
+  border-radius: 8px;
+  color: black;
+  font-family: $font;
+  font-weight: 500;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding-left: 6%;
+}
+
+::placeholder {
+  font-family: $font;
+  color: black;
+  font-weight: 700;
+}
+#clientName {
+  background: url('../imgs/Name-icon-27x27px.png');
+  background-repeat: no-repeat;
+  background-position-x: 2%;
+  background-position-y: 50%;
+}
+#clientEmail {
+  background: url('../imgs/message-icon-27x27px.png');
+  background-repeat: no-repeat;
+  background-position-x: 4%;
+  background-position-y: 50%;
+}
+#clientPhone {
+  background: url('../imgs/phone-icon-27x27px.png');
+  background-repeat: no-repeat;
+  background-position-x: 4%;
+  background-position-y: 50%;
+}
+
+input {
+  outline: none;
+}
+
+textarea {
+  outline: none;
+}

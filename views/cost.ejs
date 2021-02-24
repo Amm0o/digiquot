@@ -1,0 +1,49 @@
+<div class="selection orcamentos hide">
+  <h1 class="title"><%=translation.parabens%></h1>
+  <h2 class="black-subtitle-proposal">
+    <%=translation.veja%> <br />
+    <%=translation.indique%>:
+  </h2>
+
+  <div class="proposals">
+    <div class="agency">
+      <img style="object-fit: none" src="/imgs/digital-agecy.png" alt="" />
+      <h1 class="micro-title-orange"><%=translation.npropostas%></h1>
+      <select class="dropdown-proposals" id="agency" name="agency">
+        <option class="hide" value="" disabled selected>
+          <%=translation.numero%>
+        </option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <h3 class="proposal-name">Agency</h3>
+      <h1 id="agency-cost" class="values">200~350</h1>
+    </div>
+    <div class="freeLancer">
+      <img style="object-fit: none" src="/imgs/freelancer.png" alt="" />
+      <h1 class="micro-title-orange"><%=translation.npropostas%></h1>
+      <select class="dropdown-proposals" id="freelancer" name="freelancer">
+        <option class="hide" value="" disabled selected>
+          <%=translation.numero%>
+        </option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <h3 class="proposal-name">Free Lancer</h3>
+      <h1 id="freelancer-cost" class="values">100~200</h1>
+    </div>
+  </div>
+
+  <div class="continue-section-prososals">
+    <button id="finish" class="finish"><%=translation.pedir%></button>
+    <button class="anterior anterior-step-5-logo">
+      <%=translation.previous%>
+    </button>
+  </div>
+</div>

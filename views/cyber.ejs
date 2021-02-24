@@ -1,0 +1,51 @@
+<div class="selection cyberSecurity hide">
+  <h1 class="title">3º <%=translation.step%>: Cyber Security</h1>
+  <h2 class="black-subtitle">
+    <%=translation.chose%> <b>Cyber Security</b> <%=translation.asService%>:
+  </h2>
+
+  <div class="wrapper-column">
+    <div>
+      <select class="choices" name="sec-cert-cyber" id="sec-cert-cyber">
+        <option class="hide" value="" disabled selected>
+          <%=translation.instalarCert%> ?
+        </option>
+        <option value="yes"><%=translation.yes%></option>
+        <option value="no"><%=translation.no%></option>
+      </select>
+      <select class="choices" name="pentesting-cyber" id="pentesting-cyber">
+        <option class="hide" value="" disabled selected>
+          <%=translation.penTest%> ?
+        </option>
+        <option value="yes"><%=translation.yes%></option>
+        <option value="no"><%=translation.no%></option>
+      </select>
+    </div>
+    <div>
+      <select class="choices" name="renew-sec-cyber" id="renew-sec-cyber">
+        <option class="hide" value="" disabled selected>
+          <%=translation.renovarSeguranca%> ?
+        </option>
+        <option value="yes"><%=translation.yes%></option>
+        <option value="no"><%=translation.no%></option>
+      </select>
+      <select class="choices" name="simulate-cyber" id="simulate-cyber">
+        <option class="hide" value="" disabled selected>
+          <%=translation.simularAtaque%>?
+        </option>
+        <option value="yes"><%=translation.yes%></option>
+        <option value="no"><%=translation.no%></option>
+      </select>
+    </div>
+  </div>
+
+  <h3 class="micro-title-black"><%=translation.click%>:</h3>
+  <div class="continue-section">
+    <button id="continuar-step-3-cyber" class="continuar">
+      <%=translation.continue%>
+    </button>
+    <button id="anterior-step-3-cyber" class="anterior">
+      <%=translation.previous%>
+    </button>
+  </div>
+</div>

@@ -1,0 +1,231 @@
+<%- include("header") -%>
+
+<section class="landing">
+  <div class="landing-block-1">
+    <img
+      style="padding-bottom: 1rem"
+      src="/imgs/logo/digiquot-no-simbol.png"
+      alt=""
+    />
+    <p id="catch-phrase" class="subtitle"><%=translation.receive%></p>
+    <p class="micro-title"><%=translation.gratis%></p>
+    <button class="green-button"><%=translation.simulate%></button>
+  </div>
+</section>
+
+<section class="simulator">
+  <div class="container-simulator">
+    <h1 id="simulator-title" class="title"><%=translation.welcome%></h1>
+    <div class="services">
+      <h2 id="simulator-subtitle" class="subtitle">
+        <%=translation.paraComecar%>:
+      </h2>
+      <div>
+        <button id="Logotipo" class="service">
+          <img src="/imgs/icon-services-1-40x40.png" alt="" />
+          <%=translation.logotipo%>
+        </button>
+        <button id="Website" class="service">
+          <img src="/imgs/icon-services-2-40x40.png" alt="" />
+          <%=translation.website%>
+        </button>
+        <button id="Online Store" class="service">
+          <img src="/imgs/icon-services-3-40x40.png" alt="" />
+          <%=translation.onlineStore%>
+        </button>
+      </div>
+      <div>
+        <button id="Social Networks" class="service">
+          <img src="/imgs/icon-services-4-40x40.png" alt="" />
+          <%=translation.networks%>
+        </button>
+        <button id="Google Ads" class="service">
+          <img src="/imgs/icon-services-5-40x40.png" alt="" />
+          <%=translation.ads%>
+        </button>
+        <button id="Google SEO" class="service">
+          <img src="/imgs/icon-services-6-40x40.png" alt="" />
+          <%=translation.seo%>
+        </button>
+      </div>
+
+      <div>
+        <button
+          id="Cyber Security"
+          style="margin-bottom: 2.5rem"
+          class="service"
+        >
+          <img src="/imgs/icon-services-7-40x40.png" alt="" />
+          <%=translation.cyber%>
+        </button>
+      </div>
+    </div>
+    <div class="services-block2">
+      <p class="small-p">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+        nonummy nibh euismod tincidunt ut lao- <br />
+        Continuar reet dolore magna aliquam erat volutpa exerci tation
+        ullamcorper suscipit lob.
+      </p>
+      <button class="white-button" id="continuar-step-1">
+        <%=translation.continuar%>
+      </button>
+    </div>
+
+    <div class="wrapper hide">
+      <div class="tracker">
+        <div class="tracker-steps">
+          <img src="/imgs/big-note-icon-white.png" alt="" />
+          <h1 class="title" id="tracker-title"><%=translation.acompanhe%></h1>
+
+          <div class="step-status status-step1 hide">
+            <img src="/imgs/white-gree-check.png" alt="" />
+            <span id="step-status1" class="micro-title-white"></span>
+          </div>
+          <div class="step-status status-step2 hide">
+            <img src="/imgs/white-gree-check.png" alt="" />
+            <span id="step-status2" class="micro-title-white"></span>
+          </div>
+          <div class="step-status status-step3 hide">
+            <img src="/imgs/white-gree-check.png" alt="" />
+            <span id="step-status3" class="micro-title-white"></span>
+          </div>
+          <div class="step-status status-step4 hide">
+            <img src="/imgs/white-gree-check.png" alt="" />
+            <span id="step-status4" class="micro-title-white"
+              ><%=translation.orcamentacao%></span
+            >
+          </div>
+        </div>
+        <div class="tracker-about">
+          <img src="/imgs/Note-îcon.png" alt="" />
+          <p class="smallp">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+            volutpa exerci tation ullamcorper suscipit lob.
+          </p>
+        </div>
+      </div>
+      <%- include("step2") -%> <%- include("logo") -%> <%-
+      include("contactForm") -%> <%- include("cost") -%><%- include("website")
+      -%><%- include("onlineStore") -%> <%- include("socialNetworks") -%> <%-
+      include("seo") -%> <%- include("ads") -%> <%- include("cyber") -%> <%-
+      include("extraInfo") -%>
+    </div>
+  </div>
+</section>
+<%- include("lastStep") -%>
+
+<section class="section-horizontal" id="budgets">
+  <h2 class="title-black">
+    <b><%=translation.orcamentos%> </b> <%=translation.from%>
+  </h2>
+</section>
+
+<section class="section-horizontal">
+  <div class="row">
+    <img src="/imgs/homepage-icon-1-60x60px.png" alt="" />
+    <h2 class="h2">
+      <%=translation.agenciasde%> <br />
+      <%=translation.webdev%>
+    </h2>
+  </div>
+  <div class="row">
+    <img src="/imgs/homepage-icon-2-60x60px.png" alt="" />
+    <h2 class="h2">
+      <%=translation.agenciasde%> <br />
+      <%=translation.mkt%>
+    </h2>
+  </div>
+  <div class="row">
+    <img src="/imgs/homepage-icon-3-60x60px.png" alt="" />
+    <h2 class="h2"><%=translation.freelancers%></h2>
+  </div>
+</section>
+
+<section class="section-horizontal">
+  <div class="column-img">
+    <img src="/imgs/img-1-homepage.png" alt="" />
+  </div>
+  <div class="column">
+    <h1 class="title">1. <%=translation.siga%></h1>
+    <p class="body-p">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Tempor id eu nisl nunc
+      mi ipsum faucibus vitae. Proin fermentum auctor eu augue ut lectus arcu
+      bibendum. <br />
+      <br />
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et.
+    </p>
+  </div>
+</section>
+
+<section class="section-horizontal">
+  <div class="column-img">
+    <h1 class="title">2. <%=translation.insira%></h1>
+    <p class="body-p">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Tempor id eu nisl nunc
+      mi ipsum faucibus vitae. Proin fermentum auctor eu augue ut lectus arcu
+      bibendum. <br />
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et.
+    </p>
+  </div>
+  <div class="column">
+    <img src="/imgs/img-2-homepage.png" alt="" />
+  </div>
+</section>
+
+<section class="section-horizontal test">
+  <div class="column-img">
+    <img src="/imgs/img-2-homepage.png" alt="" />
+  </div>
+  <div class="column">
+    <h1 class="title">2. <%=translation.receba%></h1>
+    <p class="body-p">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Tempor id eu nisl nunc
+      mi ipsum faucibus vitae. Proin fermentum auctor eu augue ut lectus arcu
+      bibendum. <br />
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et.
+    </p>
+  </div>
+</section>
+
+<section class="green-section">
+  <div class="vertical-block">
+    <img src="/imgs/agency-icon.png" alt="" />
+    <p class="black-p">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Facilisis mauris sit
+      amet massa vitae tortor condimentum lacinia quis. Nisi quis eleifend quam
+      adipiscing. Vestibulum rhoncus est pellentesque elit ullamcorper. Ut
+      tellus elementum sagittis vitae et leo. Velit euismod in pellentesque
+      massa placerat.
+    </p>
+    <button class="orange-button"><%=translation.simulate%></button>
+  </div>
+  <div class="vertical-block">
+    <img src="/imgs/freelancer-icon.png" alt="" />
+    <p class="black-p">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Facilisis mauris sit
+      amet massa vitae tortor condimentum lacinia quis. Nisi quis eleifend quam
+      adipiscing. Vestibulum rhoncus est pellentesque elit ullamcorper. Ut
+      tellus elementum sagittis vitae et leo. Velit euismod in pellentesque
+      massa placerat.
+    </p>
+    <button class="orange-button"><%=translation.simulate%></button>
+  </div>
+</section>
+
+<script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"
+></script>
+
+<%- include("footer") -%>

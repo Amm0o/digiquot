@@ -1,0 +1,78 @@
+<div class="selection social-networks hide">
+  <h1 class="title">3º <%=translation.step%>: <%=translation.networks%></h1>
+  <h2 class="black-subtitle">
+    <%=translation.chose%>
+    <b><%=translation.networks%></b> <%=translation.asService%>:
+  </h2>
+
+  <div class="wrapper-column">
+    <div>
+      <select
+        class="choices"
+        name="number-social-networks"
+        id="number-social-networks"
+      >
+        <option class="hide" value="" disabled selected>
+          <%=translation.howManyNetWorks%>?
+        </option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="6">5</option>
+      </select>
+      <select
+        class="choices"
+        name="posts-social-networks"
+        id="posts-social-networks"
+      >
+        <option class="hide" value="" disabled selected>
+          <%=translation.nPosts%>
+        </option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="other"><%=translation.outro%></option>
+      </select>
+    </div>
+    <div>
+      <select
+        class="choices"
+        name="clients-social-networks"
+        id="clients-social-networks"
+      >
+        <option class="hide" value="" disabled selected>
+          <%=translation.comments%> & <br />
+          <%=translation.interaction%>
+        </option>
+        <option value="yes"><%=translation.yes%></option>
+        <option value="no"><%=translation.no%></option>
+      </select>
+      <select
+        class="choices"
+        name="campaign-managment-social-networks"
+        id="campaign-managment-social-networks"
+      >
+        <option class="hide" value="" disabled selected>
+          <%=translation.campaign%> <br />
+          <%=translation.inNet%>
+        </option>
+        <option value="yes"><%=translation.yes%></option>
+        <option value="no"><%=translation.no%></option>
+        <option value="other"><%=translation.outro%></option>
+      </select>
+    </div>
+  </div>
+
+  <h3 class="micro-title-black"><%=translation.click%>:</h3>
+  <div class="continue-section">
+    <button id="continuar-step-3-social-networks" class="continuar">
+      <%=translation.continuar%>
+    </button>
+    <button id="anterior-step-3-social-networks" class="anterior">
+      <%=translation.previous%>
+    </button>
+  </div>
+</div>
