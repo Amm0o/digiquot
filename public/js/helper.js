@@ -283,6 +283,8 @@ $('.tipologiasLogo').click(e => {
   );
 });
 
+const check = document.querySelector('#terms');
+
 // Client Data
 $('#continuar-step-4-logo').click(() => {
   serviceData.client.name = $('#clientName').val();
@@ -295,12 +297,14 @@ $('#continuar-step-4-logo').click(() => {
   ) {
     alert('Insert The missing data on the form! ');
   } else {
-    if (serviceData.client.email.includes('@')) {
+    if (serviceData.client.email.includes('@') && check.checked) {
       $('.contactForm').addClass('hide');
       $('.extraInfo').removeClass('hide');
       $('.status-step4').removeClass('hide');
-    } else {
+    } else if (!serviceData.client.email.includes('@')) {
       alert('Please provide a valid email adress');
+    } else {
+      alert('Please accept terms and conditions');
     }
   }
 });

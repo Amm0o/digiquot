@@ -1,4 +1,5 @@
 {
+  "requiredService": "Para continuar en el simulador es necesario seleccionar un servicio y hacer clic en el botón continuar.",
   "WELCOME_MSG": "Hola",
   "simulate": "¡Simular ahora!",
   "whoWeAre": "Quiénes somos",
@@ -13,7 +14,7 @@
   "onlineStore": "Online Stores",
   "networks": "Redes sociales",
   "ads": "Google Ads",
-  "seo": "Google S.E.O",
+  "seo": "Google SEO",
   "cyber": "Cyber Security",
   "continuar": "Continuar",
   "acompanhe": "Siga su progreso aquí.",

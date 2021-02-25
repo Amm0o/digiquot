@@ -634,6 +634,10 @@ button {
   padding-bottom: 2rem;
 }
 
+.terms-conditions {
+  font-family: "Raleway", sans-serif;
+}
+
 .micro-title-white {
   font-size: 0.9rem;
   font-family: "Raleway", sans-serif;
@@ -746,6 +750,7 @@ button {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-bottom: 2.5rem;
+  padding-top: 1rem;
 }
 
 .continuar {
@@ -1056,6 +1061,10 @@ textarea {
   font-weight: 600;
   cursor: pointer;
   margin-bottom: 1rem;
+}
+
+.anterior-step-5-logo {
+  padding-bottom: 1rem;
 }
 
 .choices {
@@ -1598,5 +1607,10 @@ body {
   transition: all 300ms ease 0ms;
   -webkit-transform: scaleX(1.04) scaleY(1.04);
           transform: scaleX(1.04) scaleY(1.04);
+}
+
+.countries:hover {
+  -webkit-transition: width 2s;
+  transition: width 2s;
 }
 /*# sourceMappingURL=style.css.map */
