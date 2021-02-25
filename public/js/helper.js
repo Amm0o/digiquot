@@ -2,13 +2,19 @@
 const navSlide = () => {
   const burger = document.querySelector('.burger');
   const nav = document.querySelector('.nav-links');
-  const login = document.querySelector('.login');
+  const lang1 = document.querySelector('#lang1');
+  const lang2 = document.querySelector('#lang2');
+  const lang3 = document.querySelector('#lang3');
+  const dropdown = document.querySelector('.dropdown');
   const navLinks = document.querySelectorAll('.nav-links li');
 
   // Toggle Nav
   burger.addEventListener('click', () => {
     nav.classList.toggle('nav-active');
-
+    dropdown.classList.toggle('hide');
+    lang1.classList.remove('hide');
+    lang2.classList.remove('hide');
+    lang3.classList.remove('hide');
     // Animate Links
     navLinks.forEach((link, index) => {
       if (link.style.animation) {
@@ -94,6 +100,28 @@ let serviceData = {
     cost: '',
   },
 };
+
+let currency = '€';
+// Choose Currency
+$('#continuar-step-4-logo').click(() => {
+  if (serviceData.country === 'Portugal') {
+    currency = '€';
+  } else if (serviceData.country === 'Espanha') {
+    currency = '€';
+  } else if (serviceData.country === 'Polónia') {
+    currency = 'zł';
+  } else if (serviceData.country === 'Reino Unido') {
+    currency = '£';
+  } else if (serviceData.country === 'USA') {
+    currency = '$';
+  } else if (serviceData.country === 'Brasil') {
+    currency = 'R$';
+  } else if (serviceData.country === 'Australia') {
+    currency = 'AU$';
+  } else if (serviceData.country === 'UAE') {
+    currency = 'د.إ';
+  }
+});
 
 // Proximo Function
 function proximo(previouseScetion, nextSection, button, checkField) {
@@ -265,11 +293,15 @@ $('#continuar-step-4-logo').click(() => {
     serviceData.client.phone === '' ||
     serviceData.client.email === ''
   ) {
-    alert('Insert The missing data on the form! 🖕');
+    alert('Insert The missing data on the form! ');
   } else {
-    $('.contactForm').addClass('hide');
-    $('.extraInfo').removeClass('hide');
-    $('.status-step4').removeClass('hide');
+    if (serviceData.client.email.includes('@')) {
+      $('.contactForm').addClass('hide');
+      $('.extraInfo').removeClass('hide');
+      $('.status-step4').removeClass('hide');
+    } else {
+      alert('Please provide a valid email adress');
+    }
   }
 });
 
@@ -557,61 +589,59 @@ $('#continuar-step-4-logo').click(() => {
     }
   }
   setMult();
-  console.log(`This is the mult: ${mult}`);
-
   if (serviceData.service === 'Website') {
     serviceData.agency.cost = '880';
     $('#agency-cost').text(
       `${Math.round(serviceData.agency.cost * mult)} ~ ${Math.round(
         serviceData.agency.cost * mult * 1.15
-      )}`
+      )} ${currency}`
     );
   } else if (serviceData.service === 'Logotipo') {
     serviceData.agency.cost = '700';
     $('#agency-cost').text(
       `${Math.round(serviceData.agency.cost * mult)} ~ ${Math.round(
         serviceData.agency.cost * mult * 1.15
-      )}`
+      )} ${currency}`
     );
   } else if (serviceData.service === 'Online Store') {
     serviceData.agency.cost = '2530';
     $('#agency-cost').text(
       `${Math.round(serviceData.agency.cost * mult)} ~ ${Math.round(
         serviceData.agency.cost * mult * 1.15
-      )}`
+      )} ${currency}`
     );
   } else if (serviceData.service === 'Social Networks') {
     serviceData.agency.cost = '500';
     $('#agency-cost').text(
       `${Math.round(serviceData.agency.cost * mult)} ~ ${Math.round(
         serviceData.agency.cost * mult * 1.15
-      )}`
+      )} ${currency}`
     );
     $('#agency-cost').text(
       `${Math.round(serviceData.agency.cost * mult)} ~ ${Math.round(
         serviceData.agency.cost * mult * 1.15
-      )}`
+      )} ${currency}`
     );
   } else if (serviceData.service === 'Google Ads') {
     serviceData.agency.cost = '350';
     $('#agency-cost').text(
       `${Math.round(serviceData.agency.cost * mult)} ~ ${Math.round(
         serviceData.agency.cost * mult * 1.15
-      )}`
+      )} ${currency}`
     );
   } else if (serviceData.service === 'Google SEO') {
     serviceData.agency.cost = '600';
     $('#agency-cost').text(
       `${Math.round(serviceData.agency.cost * mult)} ~ ${Math.round(
         serviceData.agency.cost * mult * 1.15
-      )}`
+      )} ${currency}`
     );
   } else if (serviceData.service === 'Cyber Security') {
     serviceData.agency.cost = '3850';
     $('#agency-cost').text(
       `${Math.round(serviceData.agency.cost * mult)} ~ ${Math.round(
         serviceData.agency.cost * mult * 1.15
-      )}`
+      )} ${currency}`
     );
   }
 
@@ -620,49 +650,49 @@ $('#continuar-step-4-logo').click(() => {
     $('#freelancer-cost').text(
       `${Math.round(serviceData.freelancer.cost * mult)} ~ ${Math.round(
         serviceData.freelancer.cost * mult * 1.15
-      )}`
+      )} ${currency}`
     );
   } else if (serviceData.service === 'Logotipo') {
     serviceData.freelancer.cost = '280';
     $('#freelancer-cost').text(
       `${Math.round(serviceData.freelancer.cost * mult)} ~ ${Math.round(
         serviceData.freelancer.cost * mult * 1.15
-      )}`
+      )} ${currency}`
     );
   } else if (serviceData.service === 'Online Store') {
     serviceData.freelancer.cost = '1518';
     $('#freelancer-cost').text(
       `${Math.round(serviceData.freelancer.cost * mult)} ~ ${Math.round(
         serviceData.freelancer.cost * mult * 1.15
-      )}`
+      )} ${currency}`
     );
   } else if (serviceData.service === 'Social Networks') {
     serviceData.freelancer.cost = '200';
     $('#freelancer-cost').text(
       `${Math.round(serviceData.freelancer.cost * mult)} ~ ${Math.round(
         serviceData.freelancer.cost * mult * 1.15
-      )}`
+      )} ${currency}`
     );
   } else if (serviceData.service === 'Google Ads') {
     serviceData.freelancer.cost = '140';
     $('#freelancer-cost').text(
       `${Math.round(serviceData.freelancer.cost * mult)} ~ ${Math.round(
         serviceData.freelancer.cost * mult * 1.15
-      )}`
+      )} ${currency}`
     );
   } else if (serviceData.service === 'Google SEO') {
     serviceData.freelancer.cost = '240';
     $('#freelancer-cost').text(
       `${Math.round(serviceData.freelancer.cost * mult)} ~ ${Math.round(
         serviceData.freelancer.cost * mult * 1.15
-      )}`
+      )} ${currency}`
     );
   } else if (serviceData.service === 'Cyber Security') {
     serviceData.freelancer.cost = '1540';
     $('#freelancer-cost').text(
       `${Math.round(serviceData.freelancer.cost * mult)} ~ ${Math.round(
         serviceData.freelancer.cost * mult * 1.15
-      )}`
+      )} ${currency}`
     );
   }
 });

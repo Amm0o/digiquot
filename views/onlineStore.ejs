@@ -16,7 +16,6 @@
         </option>
         <option value="yes"><%=translation.yes%></option>
         <option value="no"><%=translation.no%></option>
-        <option value="other"><%=translation.outro%></option>
       </select>
       <select
         class="choices"
@@ -28,7 +27,6 @@
         </option>
         <option value="yes"><%=translation.yes%></option>
         <option value="no"><%=translation.no%></option>
-        <option value="other"><%=translation.outro%></option>
       </select>
     </div>
     <div>
@@ -42,7 +40,6 @@
         </option>
         <option value="yes"><%=translation.yes%></option>
         <option value="no"><%=translation.no%></option>
-        <option value="other"><%=translation.outro%></option>
       </select>
       <select
         class="choices"
@@ -54,7 +51,6 @@
         </option>
         <option value="yes"><%=translation.yes%></option>
         <option value="no"><%=translation.no%></option>
-        <option value="other"><%=translation.other%></option>
       </select>
     </div>
     <div>
@@ -75,11 +71,10 @@
         id="payment-online-store"
       >
         <option class="hide" value="" disabled selected>
-          Quantas linguas terá o site ?
+          <%=translation.payment%>?
         </option>
-        <option value="yes">sim</option>
-        <option value="no">não</option>
-        <option value="other">outro</option>
+        <option value="yes"><%=translation.yes%></option>
+        <option value="no"><%=translation.no%></option>
       </select>
     </div>
     <div>
@@ -93,18 +88,16 @@
         </option>
         <option value="yes"><%=translation.yes%></option>
         <option value="no"><%=translation.no%></option>
-        <option value="other"><%=translation.outro%></option>
       </select>
     </div>
   </div>
 
-  <h3 class="micro-title-black"><%=translation.click%>:</h3>
   <div class="continue-section">
-    <button id="continuar-step-3-online-store" class="continuar">
-      <%=translation.continuar%>
-    </button>
     <button id="anterior-step-3-online-store" class="anterior">
       <%=translation.previous%>
+    </button>
+    <button id="continuar-step-3-online-store" class="continuar">
+      <%=translation.continuar%>
     </button>
   </div>
 </div>

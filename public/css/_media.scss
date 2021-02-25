@@ -1,8 +1,26 @@
-@media (max-width: 1325px) {
+@media (max-width: 1151px) {
+  .tracker {
+    display: none;
+  }
+
   body {
     overflow-x: hidden !important;
   }
+  .countries {
+    .countries {
+      padding-bottom: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
 
+    // div {
+    //   flex-direction: column;
+    // }
+  }
+  .selection-button {
+    max-width: 300px;
+  }
   #catch-phrase {
     width: 80%;
   }
@@ -78,13 +96,16 @@
   .links {
     flex-direction: column;
     align-items: flex-start;
+    padding-left: 4rem;
     ul {
       padding-bottom: 2rem;
     }
   }
 
-  .tracker {
-    display: none;
+  #footer-title {
+    width: 100%;
+    text-align: left;
+    padding-left: 4rem;
   }
 
   .selection {
@@ -122,5 +143,79 @@
 
   #budgets {
     padding-top: 0;
+  }
+
+  .services {
+    justify-content: center;
+  }
+
+  .service {
+    margin-right: 0;
+  }
+
+  #simulator-subtitle {
+    padding-bottom: 2rem !important;
+    padding-top: 2rem !important;
+  }
+}
+@media (max-width: 1630px) {
+  .simulator {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .service {
+    margin-right: 1rem;
+  }
+
+  .countries {
+    div {
+      display: flex;
+      justify-content: center;
+      // align-items: center;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .countries {
+    div {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .continuar {
+    width: 200px;
+  }
+  .tracker {
+    display: none;
+  }
+  .selection-button:hover {
+    background-image: url('../imgs/right-check-green.png');
+  }
+
+  #catch-phrase {
+    font-size: 1.8rem;
+    width: 100%;
+  }
+
+  .vertical-block {
+    width: 100%;
+  }
+  #vertical1 {
+    margin-bottom: 10rem;
+  }
+
+  .services {
+    justify-content: center;
+  }
+
+  .small-input-field {
+    padding-left: 12%;
+  }
+  .big-input-field {
+    padding-left: 12%;
   }
 }

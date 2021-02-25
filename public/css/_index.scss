@@ -71,6 +71,7 @@ $font: 'Raleway', sans-serif;
     justify-content: center;
     align-items: flex-start;
     height: 70%;
+    padding-top: 10rem;
   }
 }
 
@@ -259,6 +260,7 @@ $font: 'Raleway', sans-serif;
 
 .green-section {
   height: 400px;
+  width: 100vw;
   background: url('/imgs/background-agency-freelancer.png');
   background-size: cover;
   background-repeat: no-repeat;

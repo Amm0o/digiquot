@@ -8,18 +8,18 @@
   </head>
   <div class="choose-lang">
 
-    <ul >
+    <!-- <ul >
       <li><a  class="lang" class="<%=(lang=="es"?"active":"")%>" href="/?clang=es">Spanish</a></li>
       <li><a class="lang" class="<%=(lang=="en"?"active":"")%>" href="/?clang=en">English</a></li>
       <li><a class="lang" class="<%=(lang=="pt"?"active":"")%>" href="/?clang=pt">Portuguese</a></li>
     </ul> 
-  
+   -->
 
     
   </div>
   <body>
     <nav>
-      <div class="logo">
+      <div class="logo ">
         <img src="/imgs/logo/header-logo-2.png" alt="">
       </div>
       <ul class="nav-links">
@@ -27,6 +27,25 @@
         <li><a href="#"><%=translation.whoWeAre%></a></li>
         <li><a href="#"><%=translation.goals%></a></li>
         <li><a href="#"><%=translation.contacts%></a></li>
+        <li class="dropdown">
+          <div class="dropdown">
+          <button class="dropbtn">Languages 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <ul>
+              <li class="li-lang"><a class="lang" class="<%=(lang=="en"?"active":"")%>" href="/?clang=en">English</a></li>
+              <li class="li-lang"><a class="lang" class="<%=(lang=="pt"?"active":"")%>" href="/?clang=pt">Portuguese</a></li>
+              <li class="li-lang"><a  class="lang" class="<%=(lang=="es"?"active":"")%>" href="/?clang=es">Spanish</a></li>
+            </ul>
+          </div>
+          </div>
+        </li>
+
+        <li  id="lang1" class="li-langs hide"><a class="lang" class="<%=(lang=="en"?"active":"")%>" href="/?clang=en">English</a></li>
+        <li id="lang2" class="li-langs hide"><a class="lang" class="<%=(lang=="pt"?"active":"")%>" href="/?clang=pt">Portuguese</a></li>
+        <li id="lang3" class="li-langs hide"><a  class="lang" class="<%=(lang=="es"?"active":"")%>" href="/?clang=es">Spanish</a></li>
+
       </ul>
 
       <div class="burger">
