@@ -1471,7 +1471,7 @@ footer {
   }
   .cookie-container {
     width: 100vw;
-    height: 90px;
+    height: 115px;
     background-color: rgba(255, 255, 255, 0.8);
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1485,6 +1485,7 @@ footer {
   #cookie-accept {
     margin-left: 0.5rem;
     margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
     width: 130px;
     height: 28px;
   }
