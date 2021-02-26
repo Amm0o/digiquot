@@ -2,19 +2,12 @@
 const navSlide = () => {
   const burger = document.querySelector('.burger');
   const nav = document.querySelector('.nav-links');
-  const lang1 = document.querySelector('#lang1');
-  const lang2 = document.querySelector('#lang2');
-  const lang3 = document.querySelector('#lang3');
-  const dropdown = document.querySelector('.dropdown');
   const navLinks = document.querySelectorAll('.nav-links li');
 
   // Toggle Nav
   burger.addEventListener('click', () => {
     nav.classList.toggle('nav-active');
-    dropdown.classList.toggle('hide');
-    lang1.classList.remove('hide');
-    lang2.classList.remove('hide');
-    lang3.classList.remove('hide');
+
     // Animate Links
     navLinks.forEach((link, index) => {
       if (link.style.animation) {
@@ -110,7 +103,7 @@ $('#continuar-step-4-logo').click(() => {
     currency = '€';
   } else if (serviceData.country === 'Polónia') {
     currency = 'zł';
-  } else if (serviceData.country === 'Reino Unido') {
+  } else if (serviceData.country === 'United Kingdom') {
     currency = '£';
   } else if (serviceData.country === 'USA') {
     currency = '$';
@@ -699,4 +692,8 @@ $('#continuar-step-4-logo').click(() => {
       )} ${currency}`
     );
   }
+});
+
+$('#cookie-accept').click(() => {
+  $('.cookie-container').addClass('hide');
 });

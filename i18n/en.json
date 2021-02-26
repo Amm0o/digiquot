@@ -98,5 +98,7 @@
   "implementCountries": "Implementation in how many countries",
   "gestaoMensal": "Needs Monthly Management",
   "relatorioMensal": "Do you want monthly reports",
-  "moreInfo": "Any more information you want to add"
+  "moreInfo": "Any more information you want to add",
+  "cookies": "This site uses cookies to improve your browsing experience. By continuing browsing you agree to the use of cookies.",
+  "accept": "accept"
 }

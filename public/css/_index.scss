@@ -350,3 +350,34 @@ button {
 .terms-conditions {
   font-family: $font;
 }
+
+.cookie-container {
+  background-color: $SolidGreen;
+  font-family: $font;
+  font-size: 15px;
+  color: white;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  position: fixed;
+  bottom: 10px;
+  width: 80vw;
+  border-radius: 10px;
+}
+
+#cookie-accept {
+  margin-left: 2rem;
+  width: 60px;
+  height: 24px;
+  background-color: $ButtonsOrange;
+  border-radius: 32px;
+  font-family: $font;
+  border: none;
+  color: white;
+}
+
+#cookie-accept:hover {
+  font-weight: bold;
+}

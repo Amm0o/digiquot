@@ -220,6 +220,14 @@ nav a {
   display: block;
 }
 
+.langs-dropdown {
+  width: 80px;
+  font-family: "Raleway", sans-serif;
+  border: 0px;
+  outline: 0px;
+  font-size: 16px;
+}
+
 .hidden-form {
   display: none;
 }
@@ -636,6 +644,43 @@ button {
 
 .terms-conditions {
   font-family: "Raleway", sans-serif;
+}
+
+.cookie-container {
+  background-color: #56ab2f;
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  color: white;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 2;
+  position: fixed;
+  bottom: 10px;
+  width: 80vw;
+  border-radius: 10px;
+}
+
+#cookie-accept {
+  margin-left: 2rem;
+  width: 60px;
+  height: 24px;
+  background-color: #e2a61e;
+  border-radius: 32px;
+  font-family: "Raleway", sans-serif;
+  border: none;
+  color: white;
+}
+
+#cookie-accept:hover {
+  font-weight: bold;
 }
 
 .micro-title-white {
@@ -1417,10 +1462,41 @@ footer {
             justify-content: center;
   }
   .small-input-field {
-    padding-left: 12%;
+    padding-left: 13%;
+    width: 100%;
   }
   .big-input-field {
     padding-left: 12%;
+    width: 100%;
+  }
+  .cookie-container {
+    width: 100vw;
+    height: 70px;
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+  #cookie-accept {
+    margin-left: 0.5rem;
+    width: 130px;
+    height: 28px;
+  }
+  .lastStep {
+    width: 90vw;
+  }
+  .orange-big-button {
+    width: 300px !important;
+    font-size: 1.1rem !important;
+  }
+  .selection-button {
+    margin-right: 0 !important;
+    width: 100% !important;
+  }
+  .selection-button {
+    margin-right: 0 !important;
+    width: 100% !important;
+  }
+  .landing-block-1 {
+    padding-top: 0 !important;
   }
 }
 
@@ -1612,5 +1688,10 @@ body {
 .countries:hover {
   -webkit-transition: width 2s;
   transition: width 2s;
+}
+
+#lang1 {
+  background-image: url("../imgs/Flags-1.png");
+  height: 100px;
 }
 /*# sourceMappingURL=style.css.map */
