@@ -691,6 +691,10 @@ button {
   padding-top: 3rem !important;
 }
 
+.img-column {
+  width: 70% !important;
+}
+
 .micro-title-white {
   font-size: 0.9rem;
   font-family: "Raleway", sans-serif;
@@ -1300,6 +1304,7 @@ footer {
   }
   .column-img p {
     width: 90%;
+    padding-bottom: 2rem;
   }
   .column-img h1 {
     text-align: center;
