@@ -40,7 +40,7 @@
   }
 
   .white-button {
-    min-width: 100px;
+    min-width: 120px;
   }
   .section-horizontal {
     flex-direction: column;
@@ -260,5 +260,10 @@
 
   .landing-block-1 {
     padding-top: 0 !important;
+  }
+
+  .white-button {
+    width: 120px;
+    font-size: 1.2rem;
   }
 }
