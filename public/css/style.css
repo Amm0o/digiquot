@@ -683,6 +683,14 @@ button {
   font-weight: bold;
 }
 
+#budgets {
+  padding-top: 0 !important;
+}
+
+#budgets-from {
+  padding-top: 3rem !important;
+}
+
 .micro-title-white {
   font-size: 0.9rem;
   font-family: "Raleway", sans-serif;

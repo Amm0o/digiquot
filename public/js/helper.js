@@ -93,7 +93,7 @@ let serviceData = {
     cost: '',
   },
 };
-
+let country = '';
 let currency = '€';
 // Choose Currency
 $('#continuar-step-4-logo').click(() => {
@@ -136,10 +136,10 @@ function anterior(currentSection, previouseSection, button) {
 }
 
 // Tracker fill Step3
-function fillTracker(step, data) {
-  $('.status-step3').removeClass('hide');
-  document.getElementById(step).innerHTML = `Data: ${data}`;
-}
+// function fillTracker(step, data) {
+//   $('.status-step3').removeClass('hide');
+//   document.getElementById(step).innerHTML = `Data: ${data}`;
+// }
 
 // Function to get Values and continue
 function getValueSelect(
@@ -162,7 +162,8 @@ function getValueSelect(
     } else {
       $(currentSection).addClass('hide');
       $(nextSection).removeClass('hide');
-      fillTracker('step-status3', result2);
+      //fillTracker('step-status3', result2);
+      $('.status-step3').removeClass('hide');
     }
     console.log(obj);
   });
@@ -290,12 +291,18 @@ $('#continuar-step-4-logo').click(() => {
   ) {
     alert('Insert The missing data on the form! ');
   } else {
-    if (serviceData.client.email.includes('@') && check.checked) {
+    if (
+      serviceData.client.email.includes('@') &&
+      check.checked &&
+      serviceData.client.phone.length > 8
+    ) {
       $('.contactForm').addClass('hide');
       $('.extraInfo').removeClass('hide');
       $('.status-step4').removeClass('hide');
     } else if (!serviceData.client.email.includes('@')) {
       alert('Please provide a valid email adress');
+    } else if (serviceData.client.phone.length < 9) {
+      alert('Please provide a valid phone number');
     } else {
       alert('Please accept terms and conditions');
     }
@@ -468,11 +475,11 @@ async function calculatePrice() {
 
 // Garbage Code
 
-function fillTrackerStep3(step, data) {
-  $('#continuar-step-2').click(() => {
-    document.getElementById(step).innerHTML = data;
-  });
-}
+// function fillTrackerStep3(step, data) {
+//   $('#continuar-step-2').click(() => {
+//     document.getElementById(step).innerHTML = data;
+//   });
+// }
 
 $('#freelancer').change(() => {
   serviceData.freelancer.quant = $('#freelancer').val();

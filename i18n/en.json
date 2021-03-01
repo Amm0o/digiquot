@@ -1,4 +1,6 @@
 {
+  "agency": "Agency average price",
+  "freelancer": "Freelancer average price",
   "requiredService": "To proceed in the simulator it is necessary to select a service and click on the continue button.",
   "WELCOME_MSG": "Hello",
   "simulate": "Simulate Now!",
@@ -100,5 +102,6 @@
   "relatorioMensal": "Do you want monthly reports",
   "moreInfo": "Any more information you want to add",
   "cookies": "This site uses cookies to improve your browsing experience. By continuing browsing you agree to the use of cookies.",
-  "accept": "accept"
+  "accept": "accept",
+  "servicesFill": "Services: Filled"
 }
