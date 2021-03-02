@@ -158,7 +158,7 @@ function getValueSelect(
     const result = Object.values(obj);
     const result2 = result.join(' | ');
     if (result.includes(null)) {
-      alert('Fill all the fields pls');
+      alert('Please fill all the fields to continue');
     } else {
       $(currentSection).addClass('hide');
       $(nextSection).removeClass('hide');
@@ -253,6 +253,8 @@ $('#continuar-step-2').click(() => {
     document.getElementById(
       'step-status2'
     ).innerHTML = `Country: ${serviceData.country}`;
+  } else {
+    alert('Please choose a country to continue');
   }
 });
 
@@ -289,7 +291,7 @@ $('#continuar-step-4-logo').click(() => {
     serviceData.client.phone === '' ||
     serviceData.client.email === ''
   ) {
-    alert('Insert The missing data on the form! ');
+    alert('Please fill all the fields to continue');
   } else {
     if (
       serviceData.client.email.includes('@') &&
@@ -506,7 +508,7 @@ $('#finish').click(() => {
     $('.simulator').addClass('hide');
     sendService(serviceData);
   } else {
-    alert('Choose one option!');
+    alert('Please choose how many proposals do you want to receive');
   }
   console.log(serviceData);
 });

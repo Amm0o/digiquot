@@ -16,12 +16,12 @@ mongoose
   })
   .then(() => console.log('DB connection successful!'));
 
-createFreelancer.createFreelancer(
-  'Joao Leite',
-  'joao.leite@pelicanbay.pt',
-  true
-);
-createAgency.createAgency('Joao Leite', 'joao.leite@pelicanbay.pt', true);
+// createFreelancer.createFreelancer(
+//   'Joao Leite',
+//   'joao.leite@pelicanbay.pt',
+//   true
+// );
+// createAgency.createAgency('Joao Leite', 'joao.leite@pelicanbay.pt', true);
 // 1) Start the server
 const port = 3000;
 
