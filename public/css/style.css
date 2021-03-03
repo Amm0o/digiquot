@@ -222,10 +222,14 @@ nav a {
 
 .langs-dropdown {
   width: 80px;
+  height: 20px;
   font-family: "Raleway", sans-serif;
   border: 0px;
   outline: 0px;
   font-size: 16px;
+  font-family: "Font Awesome 5 Free", "Raleway", sans-serif;
+  font-weight: 900;
+  content: '\f7a2';
 }
 
 .hidden-form {
@@ -567,7 +571,7 @@ nav a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 500px;
+  height: 550px;
   width: 400px;
   background-color: white;
   border-radius: 10px;
@@ -1236,6 +1240,18 @@ footer {
   padding-top: 10px;
 }
 
+@media (max-width: 1600px) {
+  .nav-links {
+    width: 40%;
+  }
+}
+
+@media (max-width: 1300px) {
+  .nav-links {
+    width: 60%;
+  }
+}
+
 @media (max-width: 1151px) {
   .tracker {
     display: none;
@@ -1450,6 +1466,9 @@ footer {
 }
 
 @media (max-width: 600px) {
+  .green-title {
+    padding-bottom: 8rem !important;
+  }
   .continuar {
     width: 200px;
   }
@@ -1464,7 +1483,7 @@ footer {
     width: 100%;
   }
   .vertical-block {
-    width: 100%;
+    width: 93%;
   }
   #vertical1 {
     margin-bottom: 10rem;

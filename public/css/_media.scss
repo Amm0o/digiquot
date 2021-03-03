@@ -1,3 +1,14 @@
+@media (max-width: 1600px) {
+  .nav-links {
+    width: 40%;
+  }
+}
+@media (max-width: 1300px) {
+  .nav-links {
+    width: 60%;
+  }
+}
+
 @media (max-width: 1151px) {
   .tracker {
     display: none;
@@ -187,6 +198,9 @@
 }
 
 @media (max-width: 600px) {
+  .green-title {
+    padding-bottom: 8rem !important;
+  }
   .continuar {
     width: 200px;
   }
@@ -203,7 +217,7 @@
   }
 
   .vertical-block {
-    width: 100%;
+    width: 93%;
   }
   #vertical1 {
     margin-bottom: 10rem;

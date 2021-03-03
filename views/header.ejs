@@ -6,6 +6,12 @@
     <title>Digiquote</title>
     <link rel="stylesheet" href="/css/style.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
   <div class="choose-lang">
@@ -25,7 +31,6 @@
         <a href="/"><img src="/imgs/logo/header-logo-2.png" alt="" /></a>
       </div>
       <ul class="nav-links">
-        <li><a id="special" href="#"><%=translation.implement%></a></li>
         <li><a id="special" href="#"><%=translation.simulate%></a></li>
         <li><a href="#"><%=translation.whoWeAre%></a></li>
         <li><a href="#"><%=translation.goals%></a></li>
@@ -38,8 +43,8 @@
             id="langs"
             onchange="location = this.value;"
           >
-            <option class="hide langs-dropdown" value="" disabled selected>
-              Langs:
+            <option class="hide langs-dropdown" disabled selected>
+              &#xf7a2;
             </option>
             <option value="/?clang=pt">Portugal</option>
             <option value="/?clang=en">English</option>

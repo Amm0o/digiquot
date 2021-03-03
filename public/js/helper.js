@@ -112,7 +112,7 @@ $('#continuar-step-4-logo').click(() => {
   } else if (serviceData.country === 'Australia') {
     currency = 'AU$';
   } else if (serviceData.country === 'UAE') {
-    currency = 'د.إ';
+    currency = '$';
   }
 });
 
@@ -220,6 +220,8 @@ $('#continuar-step-1').click(() => {
     document.getElementById(
       'step-status1'
     ).innerHTML = `Service: ${serviceData.service}`;
+  } else {
+    alert('Please Choose a Service 😃');
   }
 });
 
@@ -579,19 +581,19 @@ $('#continuar-step-4-logo').click(() => {
     if (serviceData.country === 'Portugal') {
       mult = 1;
     } else if (serviceData.country === 'Espanha') {
-      mult = 1;
+      mult = 1.1;
     } else if (serviceData.country === 'Polónia') {
-      mult = 4.48;
+      mult = 0.8;
     } else if (serviceData.country === 'Reino Unido') {
-      mult = 4.48;
+      mult = 1.1;
     } else if (serviceData.country === 'USA') {
-      mult = 1.21;
-    } else if (serviceData.country === 'Brasil') {
-      mult = 6.52;
+      mult = 1.4;
+    } else if (serviceData.country === 'Brazil') {
+      mult = 5.192;
     } else if (serviceData.country === 'Australia') {
-      mult = 1.54;
+      mult = 1.3;
     } else if (serviceData.country === 'UAE') {
-      mult = 4.45;
+      mult = 1.1;
     }
   }
   setMult();
