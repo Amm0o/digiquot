@@ -23,6 +23,8 @@ nav {
   position: fixed;
   z-index: 2000;
   width: 100%;
+  -webkit-box-shadow: 0px -5px 30px #3333332e;
+          box-shadow: 0px -5px 30px #3333332e;
 }
 
 nav a {
@@ -571,7 +573,7 @@ nav a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 550px;
+  height: 600px;
   width: 400px;
   background-color: white;
   border-radius: 10px;
@@ -1158,7 +1160,7 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 10rem;
+  padding-top: 17rem;
 }
 
 .links {
@@ -1542,6 +1544,13 @@ footer {
   .white-button {
     width: 120px;
     font-size: 1.2rem;
+  }
+  .container-simulator {
+    bottom: 18rem !important;
+  }
+  #budgets {
+    position: relative !important;
+    bottom: 4rem !important;
   }
 }
 

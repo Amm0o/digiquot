@@ -1,4 +1,7 @@
 {
+  "termsConditions": "Accept terms & conditions",
+  "infoTracker": "Digiquot is a quote simulator provider. Digiquot is not responsible for the final proposals sent by agencies or freelancers",
+  "greenSectionHeader": "What is the difference between Agencies and Feelancers?",
   "textAgency": "When choosing a",
   "textAgency2": "professional agency,",
   "textAgency3": "you’ll be dealing with a group of qualified specialists that possess a wide array of skills.",
@@ -36,7 +39,7 @@
   "from": "FROM:",
   "agenciasdeWebDev": "Web Development Agencies",
   "agenciasdeMKT": "Digital Marketing Agencies",
-  "webdev": " Web Developement",
+  "webdev": " Web Development",
   "mkt": " Marketing Digital",
   "freelancers": "Freelancers",
   "siga": "1. Simple and Easy",
