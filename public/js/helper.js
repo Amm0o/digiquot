@@ -458,24 +458,6 @@ getValueSelect2(
   '.orcamentos'
 );
 
-// Calculate Price
-async function calculatePrice() {
-  const options = {
-    method: 'POST',
-    body: JSON.stringify(data),
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  };
-
-  const response = await fetch(
-    `/api/v1/price${serviceData.country}/${serviceData.service}`,
-    options
-  );
-  const data = await response.json();
-  const freelancerPrice = data.freelancer;
-  const agencyPrice = data.agency;
-}
 
 // Garbage Code
 
@@ -546,7 +528,16 @@ let agency = '';
 if (serviceData.service === 'Website') {
   serviceData.agency.cost = '880';
 } else if (serviceData.service === 'Logotipo') {
-  serviceData.agency.cost = '700';
+  if (serviceData.logo.tipologia === 'Tipografico') {
+    serviceData.agency.cost = '300';
+  } else if (serviceData.logo.tipologia === 'Símbolo') {
+    serviceData.agency.cost = '400';
+  } else if (serviceData.logo.tipologia === 'Simbolo e Tipografico') {
+    serviceData.agency.cost = '550';
+  } else {
+    serviceData.agency.cost = '350';
+  }
+  
 } else if (serviceData.service === 'Online Store') {
   serviceData.agency.cost = '2530';
 } else if (serviceData.service === 'Social Networks') {
@@ -605,7 +596,15 @@ $('#continuar-step-4-logo').click(() => {
       )} ${currency}`
     );
   } else if (serviceData.service === 'Logotipo') {
-    serviceData.agency.cost = '700';
+    if (serviceData.logo.tipologia === 'Tipografico') {
+      serviceData.agency.cost = '300';
+    } else if (serviceData.logo.tipologia === 'Símbolo') {
+      serviceData.agency.cost = '400';
+    } else if (serviceData.logo.tipologia === 'Simbolo e Tipografico') {
+      serviceData.agency.cost = '550';
+    } else {
+      serviceData.agency.cost = '350';
+    }
     $('#agency-cost').text(
       `${Math.round(serviceData.agency.cost * mult)} ~ ${Math.round(
         serviceData.agency.cost * mult * 1.15
@@ -654,49 +653,57 @@ $('#continuar-step-4-logo').click(() => {
   }
 
   if (serviceData.service === 'Website') {
-    serviceData.freelancer.cost = '528';
+    const cost = +serviceData.agency.cost - (+serviceData.agency.cost * 0.15)
+    serviceData.freelancer.cost = cost.toString();
+
     $('#freelancer-cost').text(
       `${Math.round(serviceData.freelancer.cost * mult)} ~ ${Math.round(
         serviceData.freelancer.cost * mult * 1.15
       )} ${currency}`
     );
   } else if (serviceData.service === 'Logotipo') {
-    serviceData.freelancer.cost = '280';
+    const cost = +serviceData.agency.cost - (+serviceData.agency.cost * 0.15)
+    serviceData.freelancer.cost = cost.toString();
     $('#freelancer-cost').text(
       `${Math.round(serviceData.freelancer.cost * mult)} ~ ${Math.round(
         serviceData.freelancer.cost * mult * 1.15
       )} ${currency}`
     );
   } else if (serviceData.service === 'Online Store') {
-    serviceData.freelancer.cost = '1518';
+    const cost = +serviceData.agency.cost - (+serviceData.agency.cost * 0.15)
+    serviceData.freelancer.cost = cost.toString();
     $('#freelancer-cost').text(
       `${Math.round(serviceData.freelancer.cost * mult)} ~ ${Math.round(
         serviceData.freelancer.cost * mult * 1.15
       )} ${currency}`
     );
   } else if (serviceData.service === 'Social Networks') {
-    serviceData.freelancer.cost = '200';
+    const cost = +serviceData.agency.cost - (+serviceData.agency.cost * 0.15)
+    serviceData.freelancer.cost = cost.toString();
     $('#freelancer-cost').text(
       `${Math.round(serviceData.freelancer.cost * mult)} ~ ${Math.round(
         serviceData.freelancer.cost * mult * 1.15
       )} ${currency}`
     );
   } else if (serviceData.service === 'Google Ads') {
-    serviceData.freelancer.cost = '140';
+    const cost = +serviceData.agency.cost - (+serviceData.agency.cost * 0.15)
+    serviceData.freelancer.cost = cost.toString();
     $('#freelancer-cost').text(
       `${Math.round(serviceData.freelancer.cost * mult)} ~ ${Math.round(
         serviceData.freelancer.cost * mult * 1.15
       )} ${currency}`
     );
   } else if (serviceData.service === 'Google SEO') {
-    serviceData.freelancer.cost = '240';
+    const cost = +serviceData.agency.cost - (+serviceData.agency.cost * 0.15)
+    serviceData.freelancer.cost = cost.toString();
     $('#freelancer-cost').text(
       `${Math.round(serviceData.freelancer.cost * mult)} ~ ${Math.round(
         serviceData.freelancer.cost * mult * 1.15
       )} ${currency}`
     );
   } else if (serviceData.service === 'Cyber Security') {
-    serviceData.freelancer.cost = '1540';
+    const cost = +serviceData.agency.cost - (+serviceData.agency.cost * 0.15)
+    serviceData.freelancer.cost = cost.toString();
     $('#freelancer-cost').text(
       `${Math.round(serviceData.freelancer.cost * mult)} ~ ${Math.round(
         serviceData.freelancer.cost * mult * 1.15
