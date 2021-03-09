@@ -8,25 +8,28 @@ const cyber = require('../models/cyberModel');
 const sendMail = require('../services/sendMail');
 const agency = require('../models/agencyModel');
 const freelancer = require('../models/freeLancerModel');
+const sendEmailClient = require('../services/sendMailClient');
+const Email = require('../services/mailer');
 
-async function sendEmails(inComingService, free, age, mail) {
-  // Free lancer email
+async function sendEmails(inComingService, free, age, service) {
+  // Freelancer emails
   if (age > 0) {
     const emails = await agency.find({}, 'email -_id');
     let emailArr = [];
-    emails.forEach(element => {
+    console.log(emails);
+    emails.forEach(async element => {
       emailArr.push(element.email);
+      const email = await element;
+      await new Email(email, service, inComingService).sendNewSimulation();
     });
-    mail(inComingService, emailArr);
   }
-  // Agency Email
+  // Agency Emails
   if (free > 0) {
     const emailsFree = await freelancer.find({}, 'email -_id');
     let emailArrFree = [];
     emailsFree.forEach(element => {
       emailArrFree.push(element.email);
     });
-    mail(inComingService, emailArrFree);
   }
 }
 
@@ -54,14 +57,6 @@ exports.addService = async (req, res) => {
         data: newWebSite,
       });
       console.log(newWebSite);
-      //Send Email
-      sendEmails(
-        inComingService,
-        req.body.freelancer.quant,
-        req.body.agency.quant,
-        sendMail.Website
-      );
-      //END SEND EMAIL
     } catch (err) {
       console.log(err);
       res.status(400).json({
@@ -90,9 +85,8 @@ exports.addService = async (req, res) => {
         inComingService,
         req.body.freelancer.quant,
         req.body.agency.quant,
-        sendMail.Logotipo
+        req.body.service
       );
-      // End Send Mail
     } catch (err) {
       console.log(err);
       res.status(400).json({
@@ -126,7 +120,7 @@ exports.addService = async (req, res) => {
         'angelo.oliveira@cyber-security.pt',
       ];
       // Send Mail
-      sendMail.OnlineStore(inComingService, arr);
+      // sendMail.OnlineStore(inComingService, arr);
       // End Send Mail
     } catch (err) {
       console.log(err);

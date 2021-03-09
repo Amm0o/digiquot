@@ -1,31 +1,54 @@
 const nodemailer = require('nodemailer');
+const ejs = require('ejs');
+const htmlToText = require('html-to-text');
 
-exports.mailer = (data, receiver, subject) => {
-  const transporter = nodemailer.createTransport({
-    host: 'mail.pelicanbay.pt',
-    port: 587,
-    secure: false,
-    auth: {
-      user: 'sender@pelicanbay.pt',
-      pass: 'ZDOGbSzxuPy1sdEPC8sV',
-    },
-    tls: {
-      rejectUnauthorized: false,
-    },
-  });
+// new Email(data).sendNewLead();
+// new Email(data).sendNewSimulation();
 
-  let message = {
-    from: 'sender@pelicanbay.pt',
-    to: receiver,
-    subject: subject,
-    html: data,
-  };
+module.exports = class Email {
+  constructor(user, service, data) {
+    this.to = user;
+    this.data = data;
+    this.service = service;
+    this.from = 'Digiquot <sender@pelicanbay.pt>';
+  }
 
-  transporter.sendMail(message, (error, info) => {
-    if (error) {
-      console.log(error);
-    } else {
-      console.log('Email sent: ' + info.response);
-    }
-  });
+  newTransport() {
+    return nodemailer.createTransport({
+      host: 'mail.pelicanbay.pt',
+      port: 587,
+      secure: false,
+      auth: {
+        user: 'sender@pelicanbay.pt',
+        pass: 'ZDOGbSzxuPy1sdEPC8sV',
+      },
+      tls: {
+        rejectUnauthorized: false,
+      },
+    });
+  }
+
+  // Send the actual Email!😃
+  async send(template, subject) {
+    // 1) Render the HTML for the email based on a ejs template
+    const html = await ejs.renderFile(
+      `${__dirname}/../views/emails/${template}.ejs`,
+      { data: this.data, service: this.service }
+    );
+    // 2) Define the email options
+    const mailOptions = {
+      from: this.from,
+      to: this.to,
+      subject,
+      html: html,
+      text: htmlToText.fromString(html),
+    };
+
+    // 3) Create a Transport and send the email
+    await this.newTransport().sendMail(mailOptions);
+  }
+
+  async sendNewSimulation() {
+    await this.send('newSimulation', `New ${this.service} Lead`);
+  }
 };

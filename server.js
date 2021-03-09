@@ -21,7 +21,7 @@ mongoose
 //   'joao.leite@pelicanbay.pt',
 //   true
 // );
-// createAgency.createAgency('Joao Leite', 'joao.leite@pelicanbay.pt', true);
+// createAgency.createAgency('angelo2', 'angelo0108@live.com.pt', true);
 // 1) Start the server
 const port = 3000;
 
