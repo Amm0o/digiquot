@@ -21,15 +21,27 @@ async function sendEmails(inComingService, free, age, service) {
       emailArr.push(element.email);
       const email = await element;
       await new Email(email, service, inComingService).sendNewSimulation();
+      await new Email(
+        inComingService.email,
+        service,
+        inComingService
+      ).sendNewSimulationClient();
     });
   }
   // Agency Emails
   if (free > 0) {
     const emailsFree = await freelancer.find({}, 'email -_id');
     let emailArrFree = [];
-    emailsFree.forEach(element => {
+    emailsFree.forEach(async element => {
       emailArrFree.push(element.email);
+      const email = await element;
+      await new Email(email, service, inComingService).sendNewSimulation();
     });
+    await new Email(
+      inComingService.email,
+      service,
+      inComingService
+    ).sendNewSimulationClient();
   }
 }
 
@@ -56,6 +68,13 @@ exports.addService = async (req, res) => {
         status: 'success',
         data: newWebSite,
       });
+      // Send Mail Agency || Freelancer && Client
+      sendEmails(
+        inComingService,
+        req.body.freelancer.quant,
+        req.body.agency.quant,
+        req.body.service
+      );
       console.log(newWebSite);
     } catch (err) {
       console.log(err);
@@ -114,6 +133,13 @@ exports.addService = async (req, res) => {
         status: 'success',
         data: newOnlineStore,
       });
+      // Send Mail
+      sendEmails(
+        inComingService,
+        req.body.freelancer.quant,
+        req.body.agency.quant,
+        req.body.service
+      );
       console.log(newOnlineStore);
       const arr = [
         'angelo.oliveira@pelicanbay.pt',
@@ -146,6 +172,13 @@ exports.addService = async (req, res) => {
         status: 'success',
         data: newSocialNetwork,
       });
+      // Send Mail
+      sendEmails(
+        inComingService,
+        req.body.freelancer.quant,
+        req.body.agency.quant,
+        req.body.service
+      );
       console.log(newSocialNetwork);
     } catch (err) {
       console.log(err);
@@ -171,6 +204,13 @@ exports.addService = async (req, res) => {
         status: 'success',
         data: newGoogleSeo,
       });
+      // Send Mail
+      sendEmails(
+        inComingService,
+        req.body.freelancer.quant,
+        req.body.agency.quant,
+        req.body.service
+      );
       console.log(newGoogleSeo);
     } catch (err) {
       console.log(err);
@@ -195,6 +235,13 @@ exports.addService = async (req, res) => {
         status: 'success',
         data: newGoogleAds,
       });
+      // Send Mail
+      sendEmails(
+        inComingService,
+        req.body.freelancer.quant,
+        req.body.agency.quant,
+        req.body.service
+      );
       console.log(newGoogleAds);
     } catch (err) {
       console.log(err);
@@ -220,6 +267,13 @@ exports.addService = async (req, res) => {
         status: 'success',
         data: newCyber,
       });
+      // Send Mail
+      sendEmails(
+        inComingService,
+        req.body.freelancer.quant,
+        req.body.agency.quant,
+        req.body.service
+      );
       console.log(newCyber);
     } catch (err) {
       console.log(err);
