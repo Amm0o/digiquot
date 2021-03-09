@@ -6,17 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Digiquot</title>
   </head>
+
+  <style>
+    h2 {
+      color: white;
+      font-weight: bold;
+      margin: 0 0;
+    }
+    h3 {
+      font-size: 14px;
+      color: white;
+      font-weight: 400;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      color: white;
+      max-width: 320px;
+    }
+    img {
+      margin: 10px 0;
+    }
+    .content {
+      background: rgb(86, 171, 47);
+      background: linear-gradient(
+        90deg,
+        rgba(86, 171, 47, 1) 0%,
+        rgba(168, 224, 99, 1) 100%
+      );
+    }
+  </style>
   <body>
-    <h1>Digiquot</h1>
-    <h2>Obrigado Pela sua confiança</h2>
-    <h3>Abaixo encontra a sua simulação</h3>
-    <div>
-      <h1><%= service %></h1>
-      <ul>
-        <% for( var p in data) { %>
-        <li><%= p %>: <%= data[p] %></li>
-        <% } %>
-      </ul>
-    </div>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr class="content">
+        <td align="center">
+          <img
+            src="http://62.171.144.213:3000/imgs/Digiquot_white.png"
+            alt=""
+          />
+          <h2>Obrigado Pela sua confiança</h2>
+          <h3>Abaixo encontra a sua simulação</h3>
+          <div>
+            <h2>Service: <%= service %></h2>
+            <ul>
+              <% for( var p in data) { %>
+              <li><%= p %>: <%= data[p] %></li>
+              <% } %>
+            </ul>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td align="center">
+          <img src="http://62.171.144.213:3000/imgs/facebook.png" alt="" />
+          <img src="http://62.171.144.213:3000/imgs/instagram.png" alt="" />
+          <img src="http://62.171.144.213:3000/imgs/linkedin.png" alt="" />
+        </td>
+      </tr>
+    </table>
   </body>
 </html>
