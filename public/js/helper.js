@@ -458,7 +458,6 @@ getValueSelect2(
   '.orcamentos'
 );
 
-
 // Garbage Code
 
 // function fillTrackerStep3(step, data) {
@@ -537,7 +536,6 @@ if (serviceData.service === 'Website') {
   } else {
     serviceData.agency.cost = '350';
   }
-  
 } else if (serviceData.service === 'Online Store') {
   serviceData.agency.cost = '2530';
 } else if (serviceData.service === 'Social Networks') {
@@ -653,7 +651,7 @@ $('#continuar-step-4-logo').click(() => {
   }
 
   if (serviceData.service === 'Website') {
-    const cost = +serviceData.agency.cost - (+serviceData.agency.cost * 0.15)
+    const cost = +serviceData.agency.cost - +serviceData.agency.cost * 0.15;
     serviceData.freelancer.cost = cost.toString();
 
     $('#freelancer-cost').text(
@@ -662,7 +660,7 @@ $('#continuar-step-4-logo').click(() => {
       )} ${currency}`
     );
   } else if (serviceData.service === 'Logotipo') {
-    const cost = +serviceData.agency.cost - (+serviceData.agency.cost * 0.15)
+    const cost = +serviceData.agency.cost - +serviceData.agency.cost * 0.15;
     serviceData.freelancer.cost = cost.toString();
     $('#freelancer-cost').text(
       `${Math.round(serviceData.freelancer.cost * mult)} ~ ${Math.round(
@@ -670,7 +668,7 @@ $('#continuar-step-4-logo').click(() => {
       )} ${currency}`
     );
   } else if (serviceData.service === 'Online Store') {
-    const cost = +serviceData.agency.cost - (+serviceData.agency.cost * 0.15)
+    const cost = +serviceData.agency.cost - +serviceData.agency.cost * 0.15;
     serviceData.freelancer.cost = cost.toString();
     $('#freelancer-cost').text(
       `${Math.round(serviceData.freelancer.cost * mult)} ~ ${Math.round(
@@ -678,7 +676,7 @@ $('#continuar-step-4-logo').click(() => {
       )} ${currency}`
     );
   } else if (serviceData.service === 'Social Networks') {
-    const cost = +serviceData.agency.cost - (+serviceData.agency.cost * 0.15)
+    const cost = +serviceData.agency.cost - +serviceData.agency.cost * 0.15;
     serviceData.freelancer.cost = cost.toString();
     $('#freelancer-cost').text(
       `${Math.round(serviceData.freelancer.cost * mult)} ~ ${Math.round(
@@ -686,7 +684,7 @@ $('#continuar-step-4-logo').click(() => {
       )} ${currency}`
     );
   } else if (serviceData.service === 'Google Ads') {
-    const cost = +serviceData.agency.cost - (+serviceData.agency.cost * 0.15)
+    const cost = +serviceData.agency.cost - +serviceData.agency.cost * 0.15;
     serviceData.freelancer.cost = cost.toString();
     $('#freelancer-cost').text(
       `${Math.round(serviceData.freelancer.cost * mult)} ~ ${Math.round(
@@ -694,7 +692,7 @@ $('#continuar-step-4-logo').click(() => {
       )} ${currency}`
     );
   } else if (serviceData.service === 'Google SEO') {
-    const cost = +serviceData.agency.cost - (+serviceData.agency.cost * 0.15)
+    const cost = +serviceData.agency.cost - +serviceData.agency.cost * 0.15;
     serviceData.freelancer.cost = cost.toString();
     $('#freelancer-cost').text(
       `${Math.round(serviceData.freelancer.cost * mult)} ~ ${Math.round(
@@ -702,7 +700,7 @@ $('#continuar-step-4-logo').click(() => {
       )} ${currency}`
     );
   } else if (serviceData.service === 'Cyber Security') {
-    const cost = +serviceData.agency.cost - (+serviceData.agency.cost * 0.15)
+    const cost = +serviceData.agency.cost - +serviceData.agency.cost * 0.15;
     serviceData.freelancer.cost = cost.toString();
     $('#freelancer-cost').text(
       `${Math.round(serviceData.freelancer.cost * mult)} ~ ${Math.round(
@@ -714,4 +712,270 @@ $('#continuar-step-4-logo').click(() => {
 
 $('#cookie-accept').click(() => {
   $('.cookie-container').addClass('hide');
+});
+
+// Meta related Stuff
+$('#continuar-step-2').click(() => {
+  if (
+    window.location.href === 'http://localhost:3000/' ||
+    window.location.href === 'http://localhost:3000/?clang=en'
+  ) {
+    if (serviceData.service === 'Logotipo') {
+      document
+        .querySelector('meta[name="description"]')
+        .setAttribute(
+          'content',
+          'Simulate in seconds the price of a Logo. Simulate now and receive as many proposals as you want, from agencies and freelancers.'
+        );
+      document
+        .querySelector('meta[name="title"]')
+        .setAttribute('content', 'Digiquot | How much it costs a Logo?');
+    } else if (serviceData.service === 'Website') {
+      document
+        .querySelector('meta[name="description"]')
+        .setAttribute(
+          'content',
+          'Simulate in seconds the price of a Website. Simulate now and receive as many proposals as you want, from agencies and freelancers.'
+        );
+      document
+        .querySelector('meta[name="title"]')
+        .setAttribute('content', 'Digiquot | How much it costs a Website?');
+    } else if (serviceData.service === 'Online Store') {
+      document
+        .querySelector('meta[name="description"]')
+        .setAttribute(
+          'content',
+          'Simulate in seconds the price of a Online Store. Simulate now and receive as many proposals as you want, from agencies and freelancers.'
+        );
+      document
+        .querySelector('meta[name="title"]')
+        .setAttribute(
+          'content',
+          'Digiquot | How much it costs a Online Store?'
+        );
+    } else if (serviceData.service === 'Social Networks') {
+      document
+        .querySelector('meta[name="description"]')
+        .setAttribute(
+          'content',
+          'Simulate in seconds the price of Social Network Management. Simulate now and receive as many proposals as you want, from agencies and freelancers.'
+        );
+      document
+        .querySelector('meta[name="title"]')
+        .setAttribute(
+          'content',
+          'Digiquot | How much it costs Social Network management?'
+        );
+    } else if (serviceData.service === 'Google Ads') {
+      document
+        .querySelector('meta[name="description"]')
+        .setAttribute(
+          'content',
+          'Simulate in seconds the price of Google Ads Management. Simulate now and receive as many proposals as you want, from agencies and freelancers.'
+        );
+      document
+        .querySelector('meta[name="title"]')
+        .setAttribute(
+          'content',
+          'Digiquot | How much it costs Google Ads Management?'
+        );
+    } else if (serviceData.service === 'Google SEO') {
+      document
+        .querySelector('meta[name="description"]')
+        .setAttribute(
+          'content',
+          'Simulate in seconds the price of Google SEO Management. Simulate now and receive as many proposals as you want, from agencies and freelancers.'
+        );
+      document
+        .querySelector('meta[name="title"]')
+        .setAttribute(
+          'content',
+          'Digiquot | How much it costs Google SEO management?'
+        );
+    } else if (serviceData.service === 'Cyber Security') {
+      document
+        .querySelector('meta[name="description"]')
+        .setAttribute(
+          'content',
+          'Simulate in seconds the price of Cyber Security Services. Simulate now and receive as many proposals as you want, from agencies and freelancers.'
+        );
+      document
+        .querySelector('meta[name="title"]')
+        .setAttribute(
+          'content',
+          'Digiquot | How much it costs Cybersecurity services?'
+        );
+    }
+  } else if (window.location.href === 'http://localhost:3000/?clang=pt') {
+    if (serviceData.service === 'Logotipo') {
+      document
+        .querySelector('meta[name="description"]')
+        .setAttribute(
+          'content',
+          'Simule em segundos o preço de um Logotipo. Simule agora e receba várias propostas, de agências e freelancers. '
+        );
+      document
+        .querySelector('meta[name="title"]')
+        .setAttribute('content', 'Digiquot | Quanto custa um Logotipo?');
+    } else if (serviceData.service === 'Website') {
+      document
+        .querySelector('meta[name="description"]')
+        .setAttribute(
+          'content',
+          'Simule em segundos o preço de um Website. Simule agora e receba várias propostas, de agências e freelancers.'
+        );
+      document
+        .querySelector('meta[name="title"]')
+        .setAttribute('content', 'Digiquot | Quanto custa um Website?');
+    } else if (serviceData.service === 'Online Store') {
+      document
+        .querySelector('meta[name="description"]')
+        .setAttribute(
+          'content',
+          'Simule em segundos o preço de uma Loja Online. Simule agora e receba várias propostas, de agências e freelancers.'
+        );
+      document
+        .querySelector('meta[name="title"]')
+        .setAttribute('content', 'Digiquot | Quanto custa uma Loja Online?');
+    } else if (serviceData.service === 'Social Networks') {
+      document
+        .querySelector('meta[name="description"]')
+        .setAttribute(
+          'content',
+          'Simule em segundos o preço de Gestão de Redes Sociais. Simule agora e receba várias propostas, de agências e freelancers.'
+        );
+      document
+        .querySelector('meta[name="title"]')
+        .setAttribute(
+          'content',
+          'Digiquot | Quanto custa um Gestão de Redes Sociais?'
+        );
+    } else if (serviceData.service === 'Google Ads') {
+      document
+        .querySelector('meta[name="description"]')
+        .setAttribute(
+          'content',
+          'Simule em segundos o preço de Gestão de Google Ads. Simule agora e receba várias propostas, de agências e freelancers.'
+        );
+      document
+        .querySelector('meta[name="title"]')
+        .setAttribute(
+          'content',
+          'Digiquot | Quanto custa a Gestão de Google Ads?'
+        );
+    } else if (serviceData.service === 'Google SEO') {
+      document
+        .querySelector('meta[name="description"]')
+        .setAttribute(
+          'content',
+          'Simule em segundos o preço de Gestão de SEO. Simule agora e receba várias propostas, de agências e freelancers.'
+        );
+      document
+        .querySelector('meta[name="title"]')
+        .setAttribute(
+          'content',
+          'Digiquot | Quanto custa a gestão de Google SEO?'
+        );
+    } else if (serviceData.service === 'Cyber Security') {
+      document
+        .querySelector('meta[name="description"]')
+        .setAttribute(
+          'content',
+          'Simule em segundos o preço de um serviço de Cibersegurança. Simule agora e receba várias propostas, de agências e freelancers.'
+        );
+      document
+        .querySelector('meta[name="title"]')
+        .setAttribute(
+          'content',
+          'Digiquot | Quanto custa um serviço de cibersegurança?'
+        );
+    }
+  } else if (window.location.href === 'http://localhost:3000/?clang=es') {
+    if (serviceData.service === 'Logotipo') {
+      document
+        .querySelector('meta[name="description"]')
+        .setAttribute(
+          'content',
+          'Simula en segundos el precio de un Logo. Simula ahora y recibe tantas propuestas como quieras, de agencias y autónomos.'
+        );
+      document
+        .querySelector('meta[name="title"]')
+        .setAttribute('content', 'Digiquot | ¿Cuánto cuesta un Logo?');
+    } else if (serviceData.service === 'Website') {
+      document
+        .querySelector('meta[name="description"]')
+        .setAttribute(
+          'content',
+          'Simule en segundos el precio de un sitio web. Simula ahora y recibe tantas propuestas como quieras, de agencias y autónomos.'
+        );
+      document
+        .querySelector('meta[name="title"]')
+        .setAttribute('content', 'Digiquot | ¿Cuánto cuesta un sitio web?');
+    } else if (serviceData.service === 'Online Store') {
+      document
+        .querySelector('meta[name="description"]')
+        .setAttribute(
+          'content',
+          'Simula en segundos el precio de una Tienda Online. Simula ahora y recibe tantas propuestas como quieras, de agencias y autónomos.'
+        );
+      document
+        .querySelector('meta[name="title"]')
+        .setAttribute(
+          'content',
+          'Digiquot | ¿Cuánto cuesta una tienda online?'
+        );
+    } else if (serviceData.service === 'Social Networks') {
+      document
+        .querySelector('meta[name="description"]')
+        .setAttribute(
+          'content',
+          'Simule en segundos el precio de la Gestión de Redes Sociales. Simula ahora y recibe tantas propuestas como quieras, de agencias y autónomos.'
+        );
+      document
+        .querySelector('meta[name="title"]')
+        .setAttribute(
+          'content',
+          'Digiquot | ¿Cuánto cuesta la gestión de redes sociales?'
+        );
+    } else if (serviceData.service === 'Google Ads') {
+      document
+        .querySelector('meta[name="description"]')
+        .setAttribute(
+          'content',
+          'Simule en segundos el precio de la gestión de anuncios de Google. Simula ahora y recibe tantas propuestas como quieras, de agencias y autónomos.'
+        );
+      document
+        .querySelector('meta[name="title"]')
+        .setAttribute(
+          'content',
+          'Digiquot | ¿Cuánto cuesta la gestión de anuncios de Google?'
+        );
+    } else if (serviceData.service === 'Google SEO') {
+      document
+        .querySelector('meta[name="description"]')
+        .setAttribute(
+          'content',
+          'Simule en segundos el precio de Google SEO Management. Simula ahora y recibe tantas propuestas como quieras, de agencias y autónomos.'
+        );
+      document
+        .querySelector('meta[name="title"]')
+        .setAttribute(
+          'content',
+          'Digiquot | ¿Cuánto cuesta la gestión SEO de Google?'
+        );
+    } else if (serviceData.service === 'Cyber Security') {
+      document
+        .querySelector('meta[name="description"]')
+        .setAttribute(
+          'content',
+          'Simule en segundos el precio de los servicios de seguridad cibernética. Simula ahora y recibe tantas propuestas como quieras, de agencias y autónomos.'
+        );
+      document
+        .querySelector('meta[name="title"]')
+        .setAttribute(
+          'content',
+          'Digiquot | ¿Cuánto cuestan los servicios de ciberseguridad?'
+        );
+    }
+  }
 });
