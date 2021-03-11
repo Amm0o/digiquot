@@ -49,8 +49,13 @@ module.exports = class Email {
   }
 
   async sendNewSimulation() {
-    await this.send('newSimulation', `New ${this.service} Lead`);
+    await this.send('newSimulation', `Digiquot | New ${this.service} Lead`);
   }
+
+  async sendNewSimulationFree() {
+    await this.send('newSimulationFree', `Digiquot | New ${this.service} Lead`);
+  }
+
   async sendNewSimulationClient() {
     await this.send('clientSimulation', `Digiquot Simulation`);
   }

@@ -107,7 +107,7 @@ $('#continuar-step-4-logo').click(() => {
     currency = '£';
   } else if (serviceData.country === 'USA') {
     currency = '$';
-  } else if (serviceData.country === 'Brasil') {
+  } else if (serviceData.country === 'Brazil') {
     currency = 'R$';
   } else if (serviceData.country === 'Australia') {
     currency = 'AU$';

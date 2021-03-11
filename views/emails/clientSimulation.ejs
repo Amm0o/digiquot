@@ -47,14 +47,98 @@
             src="http://62.171.144.213:3000/imgs/Digiquot_white.png"
             alt=""
           />
-          <h2>Obrigado Pela sua confiança</h2>
-          <h3>Abaixo encontra a sua simulação</h3>
+          <h2>Thank you for your trust!</h2>
+          <h3>You will find your simullation bellow</h3>
           <div>
             <h2>Service: <%= service %></h2>
             <ul>
-              <% for( var p in data) { %>
+              <% if( service === 'Website' ) {%>
+
+              <li>Client Name: <%= data.name %></li>
+              <li>Client Phone: <%= data.phone %></li>
+              <li>Client Email: <%= data.email %></li>
+              <li>Client Message: <%= data.message %></li>
+              <li>Contact Form: <%= data.form %></li>
+              <li>Security Certificate: <%= data.cert %></li>
+              <li>Domain and Hosting: <%= data.domainHosting %></li>
+              <li>Dedicated Emails: <%= data.emails %></li>
+              <li>Number of Languages: <%= data.langs %></li>
+              <li>Simulation Cost Freelancer: <%= data.priceFree %></li>
+              <li>Simulation Cost Agency: <%= data.priceAgency%></li>
+              <% } else if ( service === 'Logotipo') { %>
+
+              <li>Client Name: <%= data.name %></li>
+              <li>Client Phone: <%= data.phone %></li>
+              <li>Client Email: <%= data.email %></li>
+              <li>Client Message: <%= data.message %></li>
+              <li>Contact Form: <%= data.form %></li>
+              <li>Typography: <%= data.tipologia %></li>
+              <li>Simulation Cost Freelancer: <%= data.priceFree %></li>
+              <li>Simulation Cost Agency: <%= data.priceAgency%></li>
+              <% } else if(service === 'Online Store') {%>
+
+              <li>Client Name: <%= data.name %></li>
+              <li>Client Phone: <%= data.phone %></li>
+              <li>Client Email: <%= data.email %></li>
+              <li>Client Message: <%= data.message %></li>
+              <li>Contact Form: <%= data.form %></li>
+              <li>Security Certificate: <%= data.cert %></li>
+              <li>Domain and Hosting: <%= data.domainHosting %></li>
+              <li>Dedicated Emails: <%= data.emails %></li>
+              <li>Number of Languages: <%= data.langs %></li>
+              <li>Payment Integration: <%= data.payment %></li>
+              <li>Billing Integration: <%= data.billing %></li>
+              <li>Simulation Cost Freelancer: <%= data.priceFree %></li>
+              <li>Simulation Cost Agency: <%= data.priceAgency%></li>
+              <%} else if (service === 'Social Networks') {%>
+
+              <li>Client Name: <%= data.name %></li>
+              <li>Client Phone: <%= data.phone %></li>
+              <li>Client Email: <%= data.email %></li>
+              <li>Client Message: <%= data.message %></li>
+              <li>Number of Social Networks: <%= data.socialNetworks %></li>
+              <li>Posts per week: <%= data.posts %></li>
+              <li>Comment managment: <%= data.interaction %></li>
+              <li>Social campaign managment: <%= data.publicityManagment %></li>
+              <li>Simulation Cost Freelancer: <%= data.priceFree %></li>
+              <li>Simulation Cost Agency: <%= data.priceAgency%></li>
+              <% } else if(service === 'Google SEO') {%>
+
+              <li>Client Name: <%= data.name %></li>
+              <li>Client Phone: <%= data.phone %></li>
+              <li>Client Email: <%= data.email %></li>
+              <li>Client Message: <%= data.message %></li>
+              <li>SEO review: <%= data.revision %></li>
+              <li>SEO improvement: <%= data.improvement %></li>
+              <li>Content Creation: <%= data.contentCreation %></li>
+              <li>Number of Languages: <%= data.langs %></li>
+              <li>Simulation Cost Freelancer: <%= data.priceFree %></li>
+              <li>Simulation Cost Agency: <%= data.priceAgency%></li>
+              <%} else if(service === 'Google Ads') {%>
+              <li>Client Name: <%= data.name %></li>
+              <li>Client Phone: <%= data.phone %></li>
+              <li>Client Email: <%= data.email %></li>
+              <li>Client Message: <%= data.message %></li>
+              <li>Number of Countries: <%= data.countries %></li>
+              <li>Monthly Managmnet: <%= data.management %></li>
+              <li>Monthly Reports: <%= data.report %></li>
+              <li>Simulation Cost Freelancer: <%= data.priceFree %></li>
+              <li>Simulation Cost Agency: <%= data.priceAgency%></li>
+              <%} else if (service === 'Cyber Security') {%>
+
+              <li>Client Name: <%= data.name %></li>
+              <li>Client Phone: <%= data.phone %></li>
+              <li>Client Email: <%= data.email %></li>
+              <li>Client Message: <%= data.message %></li>
+              <li>Security Certificate Install: <%= data.secCert %></li>
+              <li>Pentesting: <%= data.pentesting %></li>
+              <li>Network Security Renew: <%= data.renew %></li>
+              <li>Attack Simulation: <%= data.simulate %></li>
+              <li>Simulation Cost Freelancer: <%= data.priceFree %></li>
+              <li>Simulation Cost Agency: <%= data.priceAgency%></li>
+              <% } else { %> <% for( var p in data) { %>
               <li><%= p %>: <%= data[p] %></li>
-              <% } %>
+              <% } }%>
             </ul>
           </div>
         </td>
