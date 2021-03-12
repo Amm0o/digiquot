@@ -95,6 +95,13 @@ let serviceData = {
 };
 let country = '';
 let currency = '€';
+
+let contactForm = {
+  name: '',
+  phone: '',
+  email: '',
+  message: '',
+};
 // Choose Currency
 $('#continuar-step-4-logo').click(() => {
   if (serviceData.country === 'Portugal') {
@@ -205,6 +212,53 @@ async function sendService(data) {
 
   fetch(`/api/v1/service/${serviceData.service}`, options);
 }
+
+// Contact Form API
+async function sendContactForm(data) {
+  const options = {
+    method: 'POST',
+    body: JSON.stringify(data),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  };
+
+  fetch(`/contacts/api`, options);
+}
+
+// Query for Contact Form
+$('#send-contact').click(() => {
+  const checkContact = document.querySelector('#termsContact');
+  contactForm.name = $('#agencyName').val();
+  contactForm.phone = $('#agencyPhone').val();
+  contactForm.email = $('#agencyEmail').val();
+  contactForm.message = $('#extraInfo-textAgency').val();
+  if (
+    contactForm.name === '' ||
+    contactForm.phone === '' ||
+    contactForm.email === ''
+  ) {
+    alert('Please fill the missing fields');
+  } else {
+    if (
+      contactForm.email.includes('@') &&
+      checkContact.checked &&
+      contactForm.phone.length > 8
+    ) {
+      $('.clientForm').addClass('hide');
+      $('#send-contact').addClass('hide');
+      $('#Thank').removeClass('hide');
+      $('#contact-Homepage').removeClass('hide');
+      sendContactForm(contactForm);
+    } else if (!contactForm.email.includes('@')) {
+      alert('Please provide a valid email adress');
+    } else if (contactForm.phone.length < 9) {
+      alert('Please provide a valid phone number');
+    } else {
+      alert('Please accept terms and conditions');
+    }
+  }
+});
 
 // Function to fill tracker
 $('#continuar-step-1').click(() => {

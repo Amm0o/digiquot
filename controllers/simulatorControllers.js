@@ -49,6 +49,7 @@ exports.addService = async (req, res) => {
   console.log(req.body);
   if (req.params.service === 'Website') {
     let inComingService = {
+      country: req.body.country,
       name: req.body.client.name,
       phone: +req.body.client.phone,
       email: req.body.client.email,

@@ -10,17 +10,17 @@ module.exports = class Email {
     this.to = user;
     this.data = data;
     this.service = service;
-    this.from = 'Digiquot <sender@pelicanbay.pt>';
+    this.from = 'Digiquot <sender@digiquot.com>';
   }
 
   newTransport() {
     return nodemailer.createTransport({
-      host: 'mail.pelicanbay.pt',
+      host: 'mail.digiquot.com',
       port: 587,
       secure: false,
       auth: {
-        user: 'sender@pelicanbay.pt',
-        pass: 'ZDOGbSzxuPy1sdEPC8sV',
+        user: 'sender@digiquot.com',
+        pass: '7!MC/!,;94cWn!Fr',
       },
       tls: {
         rejectUnauthorized: false,
@@ -58,5 +58,9 @@ module.exports = class Email {
 
   async sendNewSimulationClient() {
     await this.send('clientSimulation', `Digiquot Simulation`);
+  }
+
+  async newContact() {
+    await this.send('newContact', `New Contact`);
   }
 };

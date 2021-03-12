@@ -1,4 +1,8 @@
 {
+  "sendContact": "Send",
+  "homePage": "Homepage",
+  "ThankYouContact": "Thank you for you contact!",
+  "ageorfree": "Are you an Agency or a Freelancer? Contact us on the form below",
   "termsConditions": "Accept terms & conditions",
   "infoTracker": "Digiquot is a quote simulator provider. Digiquot is not responsible for the final proposals sent by agencies or freelancers",
   "greenSectionHeader": "What is the difference between Agencies and Feelancers?",
@@ -95,7 +99,7 @@
   "outro": "other",
   "secCert": "Security Certificate?",
   "dominio": "Domain and Hosting?",
-  "emails": "Dedicated Emails",
+  "emails": "Dedicated Emails?",
   "linguas": "Number of Languages?",
   "payment": "Payment Integration?",
   "faturacao": "Billing System Integration?",

@@ -20,3 +20,16 @@ $font: 'Raleway', sans-serif;
   padding-left: 10px;
   padding-top: 10px;
 }
+
+.extraInfo-text2 {
+  resize: none;
+  height: 250px;
+  width: 80%;
+  font-family: $font;
+  font-size: 17px;
+  color: $Black;
+  padding-left: 10px;
+  padding-top: 10px;
+  border: 0.8px solid #c9c9c9 !important;
+  border-radius: 4px;
+}

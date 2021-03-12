@@ -1,68 +1,16 @@
-<%- include("header") -%>
+<%- include("header2") -%>
 <section class="landing">
   <div class="landing-block-1" data-aos="zoom-in" data-aos-duration="1000">
     <p id="catch-phrase" class="subtitle"><%=translation.receive%></p>
-    <a href="#simulator" style="padding-top: 1rem">
+    <a href="/" style="padding-top: 1rem">
       <button class="green-button"><%=translation.gratis%></button></a
     >
   </div>
 </section>
 <section id="simulator"></section>
 <section class="simulator">
-  <div class="container-simulator" data-aos="zoom-in" data-aos-duration="1000">
-    <h1 id="simulator-title" class="title"><%=translation.welcome%></h1>
-    <div class="services">
-      <h2 id="simulator-subtitle" class="subtitle">
-        <%=translation.paraComecar%>
-      </h2>
-      <div>
-        <button id="Logotipo" class="service">
-          <img src="/imgs/icon-services-1-40x40.png" alt="" />
-          <%=translation.logotipo%>
-        </button>
-        <button id="Website" class="service">
-          <img src="/imgs/icon-services-2-40x40.png" alt="" />
-          <%=translation.website%>
-        </button>
-        <button id="Online Store" class="service">
-          <img src="/imgs/icon-services-5-40x40.png" alt="" />
-          <%=translation.onlineStore%>
-        </button>
-      </div>
-      <div>
-        <button id="Social Networks" class="service">
-          <img src="/imgs/icon-services-3-40x40.png" alt="" />
-          <%=translation.networks%>
-        </button>
-        <button id="Google Ads" class="service">
-          <img src="/imgs/icon-services-4-40x40.png" alt="" />
-          <%=translation.ads%>
-        </button>
-        <button id="Google SEO" class="service">
-          <img src="/imgs/icon-services-6-40x40.png" alt="" />
-          <%=translation.seo%>
-        </button>
-      </div>
-
-      <div>
-        <button
-          id="Cyber Security"
-          style="margin-bottom: 2.5rem"
-          class="service"
-        >
-          <img src="/imgs/icon-services-7-40x40.png" alt="" />
-          <%=translation.cyber%>
-        </button>
-      </div>
-    </div>
-    <div class="services-block2">
-      <p class="small-p"><%=translation.requiredService%></p>
-      <button class="white-button" id="continuar-step-1">
-        <%=translation.continuar%>
-      </button>
-    </div>
-
-    <div class="wrapper hide" data-aos="zoom-in" data-aos-duration="1000">
+  <div>
+    <div class="wrapper" data-aos="zoom-in" data-aos-duration="1000">
       <div class="tracker">
         <div class="tracker-steps">
           <img src="/imgs/big-note-icon-white.png" alt="" />
@@ -97,15 +45,10 @@
           </p>
         </div>
       </div>
-      <%- include("step2") -%> <%- include("logo") -%> <%-
-      include("contactForm") -%> <%- include("cost") -%><%- include("website")
-      -%><%- include("onlineStore") -%> <%- include("socialNetworks") -%> <%-
-      include("seo") -%> <%- include("ads") -%> <%- include("cyber") -%> <%-
-      include("extrainfo") -%>
+      <%-include("contactsPage") -%>
     </div>
   </div>
 </section>
-<%- include("lastStep") -%>
 
 <section
   class="section-horizontal"
@@ -206,7 +149,7 @@
       <br />
       <%=translation.textAgency5%>
     </p>
-    <a href="#simulator">
+    <a href="/">
       <button class="orange-button"><%=translation.simulate%></button></a
     >
   </div>
@@ -221,7 +164,7 @@
       <br />
       <%=translation.textFreelancer5%>
     </p>
-    <a href="#simulator">
+    <a href="/">
       <button class="orange-button"><%=translation.simulate%></button></a
     >
   </div>

@@ -1242,6 +1242,19 @@ footer {
   padding-top: 10px;
 }
 
+.extraInfo-text2 {
+  resize: none;
+  height: 250px;
+  width: 80%;
+  font-family: "Raleway", sans-serif;
+  font-size: 17px;
+  color: #333333;
+  padding-left: 10px;
+  padding-top: 10px;
+  border: 0.8px solid #c9c9c9 !important;
+  border-radius: 4px;
+}
+
 @media (max-width: 1600px) {
   .nav-links {
     width: 40%;

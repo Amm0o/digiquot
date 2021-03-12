@@ -1,0 +1,66 @@
+<div class="selection contactForm">
+  <h1 class="title hide" id="Thank"><%=translation.ThankYouContact%></h1>
+  <div class="clientForm">
+    <h1 class="title"><%=translation.ageorfree%></h1>
+    <div>
+      <input
+        class="big-input-field"
+        type="text"
+        name="agencyName"
+        id="agencyName"
+        placeholder="*Name"
+      />
+    </div>
+
+    <div>
+      <input
+        class="small-input-field"
+        type="number"
+        name="agencyPhone"
+        id="agencyPhone"
+        placeholder="*Phone"
+      />
+
+      <input
+        class="small-input-field"
+        type="text"
+        name="agencyEmail"
+        id="agencyEmail"
+        placeholder="*Email"
+      />
+    </div>
+
+    <div class="extraInfo-section" style="padding-bottom: 1rem">
+      <textarea
+        class="extraInfo-text2"
+        id="extraInfo-textAgency"
+        name="extraInfoAgency"
+        placeholder="Insert extra information"
+      ></textarea>
+    </div>
+
+    <div class="terms-conditions">
+      <input
+        type="checkbox"
+        id="termsContact"
+        name="checkbox-news"
+        value="Condicoes"
+        required=""
+      />
+      <a href="/terms" target="_blank" style="text-decoration: none"
+        ><%=translation.termsConditions%></a
+      >
+    </div>
+  </div>
+
+  <div class="continue-section">
+    <a href="/">
+      <button id="contact-Homepage" class="continuar hide">
+        <%=translation.homePage%>
+      </button></a
+    >
+    <button id="send-contact" class="continuar">
+      <%=translation.sendContact%>
+    </button>
+  </div>
+</div>
