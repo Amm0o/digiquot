@@ -1690,6 +1690,7 @@ button {
   font-size: 1.5rem;
   font-family: 'Raleway', sans-serif;
   color: #56ab2f;
+  max-width: 100%;
 }
 
 #special {

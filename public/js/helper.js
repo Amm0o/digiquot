@@ -771,8 +771,9 @@ $('#cookie-accept').click(() => {
 // Meta related Stuff
 $('#continuar-step-2').click(() => {
   if (
-    window.location.href === 'http://localhost:3000/' ||
-    window.location.href === 'http://localhost:3000/?clang=en'
+    window.location.href === 'https://digiquot.com/' ||
+    window.location.href === 'https://digiquot.com/?clang=en' ||
+    window.location.href === 'https://www.digiquot.com'
   ) {
     if (serviceData.service === 'Logotipo') {
       document
@@ -860,7 +861,10 @@ $('#continuar-step-2').click(() => {
           'Digiquot | How much it costs Cybersecurity services?'
         );
     }
-  } else if (window.location.href === 'http://localhost:3000/?clang=pt') {
+  } else if (
+    window.location.href === 'https://digiquot.com/?clang=pt' ||
+    window.location.href === 'https://www.digiquot.com/?clang=pt'
+  ) {
     if (serviceData.service === 'Logotipo') {
       document
         .querySelector('meta[name="description"]')
@@ -944,7 +948,10 @@ $('#continuar-step-2').click(() => {
           'Digiquot | Quanto custa um serviço de cibersegurança?'
         );
     }
-  } else if (window.location.href === 'http://localhost:3000/?clang=es') {
+  } else if (
+    window.location.href === 'https://digiquot.com/?clang=es' ||
+    window.location.href === 'https://www.1digiquot.com/?clang=es'
+  ) {
     if (serviceData.service === 'Logotipo') {
       document
         .querySelector('meta[name="description"]')

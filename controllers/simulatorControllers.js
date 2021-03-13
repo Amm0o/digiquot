@@ -89,6 +89,7 @@ exports.addService = async (req, res) => {
   } else if (req.params.service === 'Logotipo') {
     // Logo
     let inComingService = {
+      country: req.body.country,
       name: req.body.client.name,
       phone: +req.body.client.phone,
       email: req.body.client.email,
@@ -122,6 +123,7 @@ exports.addService = async (req, res) => {
   } else if (req.params.service === 'Online Store') {
     // Online Store
     let inComingService = {
+      country: req.body.country,
       name: req.body.client.name,
       phone: +req.body.client.phone,
       email: req.body.client.email,
@@ -167,6 +169,7 @@ exports.addService = async (req, res) => {
   } else if (req.params.service === 'Social Networks') {
     // Social Networks
     let inComingService = {
+      country: req.body.country,
       name: req.body.client.name,
       phone: +req.body.client.phone,
       email: req.body.client.email,
@@ -202,6 +205,7 @@ exports.addService = async (req, res) => {
   } else if (req.params.service === 'Google SEO') {
     // Google Seo
     let inComingService = {
+      country: req.body.country,
       name: req.body.client.name,
       phone: +req.body.client.phone,
       email: req.body.client.email,
@@ -237,6 +241,7 @@ exports.addService = async (req, res) => {
   } else if (req.params.service === 'Google Ads') {
     // Google ads
     let inComingService = {
+      country: req.body.country,
       name: req.body.client.name,
       phone: +req.body.client.phone,
       email: req.body.client.email,
@@ -271,6 +276,7 @@ exports.addService = async (req, res) => {
   } else if (req.params.service === 'Cyber Security') {
     // Cyber Security
     let inComingService = {
+      country: req.body.country,
       name: req.body.client.name,
       phone: +req.body.client.phone,
       email: req.body.client.email,
