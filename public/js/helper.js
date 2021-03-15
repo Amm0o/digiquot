@@ -785,6 +785,7 @@ $('#continuar-step-2').click(() => {
       document
         .querySelector('meta[name="title"]')
         .setAttribute('content', 'Digiquot | How much it costs a Logo?');
+      document.title = 'Digiquot | How much it costs a Logo?';
     } else if (serviceData.service === 'Website') {
       document
         .querySelector('meta[name="description"]')
@@ -795,6 +796,7 @@ $('#continuar-step-2').click(() => {
       document
         .querySelector('meta[name="title"]')
         .setAttribute('content', 'Digiquot | How much it costs a Website?');
+      document.title = 'Digiquot | How much it costs a Website?';
     } else if (serviceData.service === 'Online Store') {
       document
         .querySelector('meta[name="description"]')
@@ -808,6 +810,7 @@ $('#continuar-step-2').click(() => {
           'content',
           'Digiquot | How much it costs a Online Store?'
         );
+      document.title = 'Digiquot | How much it costs a Online Store?';
     } else if (serviceData.service === 'Social Networks') {
       document
         .querySelector('meta[name="description"]')
@@ -821,6 +824,9 @@ $('#continuar-step-2').click(() => {
           'content',
           'Digiquot | How much it costs Social Network management?'
         );
+
+      document.title =
+        'Digiquot | How much it costs Social Network management?';
     } else if (serviceData.service === 'Google Ads') {
       document
         .querySelector('meta[name="description"]')
@@ -834,6 +840,7 @@ $('#continuar-step-2').click(() => {
           'content',
           'Digiquot | How much it costs Google Ads Management?'
         );
+      document.title = 'Digiquot | How much it costs Google Ads Management?';
     } else if (serviceData.service === 'Google SEO') {
       document
         .querySelector('meta[name="description"]')
@@ -847,6 +854,8 @@ $('#continuar-step-2').click(() => {
           'content',
           'Digiquot | How much it costs Google SEO management?'
         );
+
+      document.title = 'Digiquot | How much it costs Google SEO management?';
     } else if (serviceData.service === 'Cyber Security') {
       document
         .querySelector('meta[name="description"]')
@@ -860,6 +869,8 @@ $('#continuar-step-2').click(() => {
           'content',
           'Digiquot | How much it costs Cybersecurity services?'
         );
+
+      document.title = 'Digiquot | How much it costs Cybersecurity services?';
     }
   } else if (
     window.location.href === 'https://digiquot.com/?clang=pt' ||
@@ -875,6 +886,8 @@ $('#continuar-step-2').click(() => {
       document
         .querySelector('meta[name="title"]')
         .setAttribute('content', 'Digiquot | Quanto custa um Logotipo?');
+
+      document.title = 'Digiquot | How much it costs Cybersecurity services?';
     } else if (serviceData.service === 'Website') {
       document
         .querySelector('meta[name="description"]')
@@ -885,6 +898,8 @@ $('#continuar-step-2').click(() => {
       document
         .querySelector('meta[name="title"]')
         .setAttribute('content', 'Digiquot | Quanto custa um Website?');
+
+      document.title = 'Digiquot | Quanto custa um Website?';
     } else if (serviceData.service === 'Online Store') {
       document
         .querySelector('meta[name="description"]')
@@ -895,6 +910,8 @@ $('#continuar-step-2').click(() => {
       document
         .querySelector('meta[name="title"]')
         .setAttribute('content', 'Digiquot | Quanto custa uma Loja Online?');
+
+      document.title = 'Digiquot | Quanto custa uma Loja Online?';
     } else if (serviceData.service === 'Social Networks') {
       document
         .querySelector('meta[name="description"]')
@@ -908,6 +925,8 @@ $('#continuar-step-2').click(() => {
           'content',
           'Digiquot | Quanto custa um Gestão de Redes Sociais?'
         );
+
+      document.title = 'Digiquot | Quanto custa um Gestão de Redes Sociais?';
     } else if (serviceData.service === 'Google Ads') {
       document
         .querySelector('meta[name="description"]')
@@ -921,6 +940,8 @@ $('#continuar-step-2').click(() => {
           'content',
           'Digiquot | Quanto custa a Gestão de Google Ads?'
         );
+
+      document.title = 'Digiquot | Quanto custa a Gestão de Google Ads?';
     } else if (serviceData.service === 'Google SEO') {
       document
         .querySelector('meta[name="description"]')
@@ -934,6 +955,8 @@ $('#continuar-step-2').click(() => {
           'content',
           'Digiquot | Quanto custa a gestão de Google SEO?'
         );
+
+      document.title = 'Digiquot | Quanto custa a gestão de Google SEO?';
     } else if (serviceData.service === 'Cyber Security') {
       document
         .querySelector('meta[name="description"]')
@@ -947,6 +970,8 @@ $('#continuar-step-2').click(() => {
           'content',
           'Digiquot | Quanto custa um serviço de cibersegurança?'
         );
+
+      document.title = 'Digiquot | Quanto custa um serviço de cibersegurança?';
     }
   } else if (
     window.location.href === 'https://digiquot.com/?clang=es' ||
@@ -962,6 +987,7 @@ $('#continuar-step-2').click(() => {
       document
         .querySelector('meta[name="title"]')
         .setAttribute('content', 'Digiquot | ¿Cuánto cuesta un Logo?');
+      document.title = 'Digiquot | ¿Cuánto cuesta un Logo?';
     } else if (serviceData.service === 'Website') {
       document
         .querySelector('meta[name="description"]')
@@ -972,6 +998,7 @@ $('#continuar-step-2').click(() => {
       document
         .querySelector('meta[name="title"]')
         .setAttribute('content', 'Digiquot | ¿Cuánto cuesta un sitio web?');
+      document.title = 'Digiquot | ¿Cuánto cuesta un sitio web?';
     } else if (serviceData.service === 'Online Store') {
       document
         .querySelector('meta[name="description"]')
@@ -985,6 +1012,8 @@ $('#continuar-step-2').click(() => {
           'content',
           'Digiquot | ¿Cuánto cuesta una tienda online?'
         );
+
+      document.title = 'Digiquot | ¿Cuánto cuesta una tienda online?';
     } else if (serviceData.service === 'Social Networks') {
       document
         .querySelector('meta[name="description"]')
@@ -998,6 +1027,9 @@ $('#continuar-step-2').click(() => {
           'content',
           'Digiquot | ¿Cuánto cuesta la gestión de redes sociales?'
         );
+
+      document.title =
+        'Digiquot | ¿Cuánto cuesta la gestión de redes sociales?';
     } else if (serviceData.service === 'Google Ads') {
       document
         .querySelector('meta[name="description"]')
@@ -1011,6 +1043,9 @@ $('#continuar-step-2').click(() => {
           'content',
           'Digiquot | ¿Cuánto cuesta la gestión de anuncios de Google?'
         );
+
+      document.title =
+        'Digiquot | ¿Cuánto cuesta la gestión de anuncios de Google?';
     } else if (serviceData.service === 'Google SEO') {
       document
         .querySelector('meta[name="description"]')
@@ -1024,6 +1059,8 @@ $('#continuar-step-2').click(() => {
           'content',
           'Digiquot | ¿Cuánto cuesta la gestión SEO de Google?'
         );
+
+      document.title = 'Digiquot | ¿Cuánto cuesta la gestión SEO de Google?';
     } else if (serviceData.service === 'Cyber Security') {
       document
         .querySelector('meta[name="description"]')
@@ -1037,6 +1074,9 @@ $('#continuar-step-2').click(() => {
           'content',
           'Digiquot | ¿Cuánto cuestan los servicios de ciberseguridad?'
         );
+
+      document.title =
+        'Digiquot | ¿Cuánto cuestan los servicios de ciberseguridad?';
     }
   }
 });
