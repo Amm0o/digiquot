@@ -171,6 +171,7 @@ function getValueSelect(
       $(nextSection).removeClass('hide');
       //fillTracker('step-status3', result2);
       $('.status-step3').removeClass('hide');
+      sendService(serviceData);
     }
     console.log(obj);
   });
