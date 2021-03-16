@@ -1667,6 +1667,20 @@ footer {
   padding-right: 5px;
 }
 
+.big-block-text {
+  margin: 0 20%;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+}
+
+.pp-title {
+  font-family: "Raleway", sans-serif;
+  font-size: 14px !important;
+  margin: 0 20%;
+  font-weight: bold !important;
+  color: black !important;
+}
+
 html {
   scroll-behavior: smooth;
 }

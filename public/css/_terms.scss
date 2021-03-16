@@ -1,0 +1,25 @@
+$SolidGreen: #56ab2f;
+$ButtonsOrange: #e2a61e;
+$SimulatorResults: #f37335;
+$cinza: #f1f1f1;
+$Black: #333333;
+$LightGrey: #f4f4f4;
+$Gradient: linear-gradient(
+  90deg,
+  rgba(86, 171, 47, 1) 0%,
+  rgba(168, 224, 99, 1) 100%
+);
+$font: 'Raleway', sans-serif;
+.big-block-text {
+
+    margin: 0 20%;
+    font-family: $font;
+    font-size: 14px;
+}
+.pp-title {
+    font-family: $font;
+    font-size: 14px !important;
+    margin: 0 20%;
+    font-weight: bold !important;
+    color: black !important;
+}

@@ -9,6 +9,9 @@ exports.homePage = (req, res) => {
 exports.terms = (req, res) => {
   res.render('terms');
 };
+exports.termsPt = (req, res) => {
+  res.render('termsPt');
+};
 
 exports.sendContact = async (req, res) => {
   const contact = req.body;

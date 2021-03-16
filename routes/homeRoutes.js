@@ -12,5 +12,6 @@ router.route('/contacts').get(contactsController.contacts);
 router.route('/contacts/api').post(homeControllers.sendContact);
 // Terms and Services
 router.route('/terms').get(homeControllers.terms);
+router.route('/terms/pt').get(homeControllers.termsPt);
 
 module.exports = router;

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="title"
+      content="Digiquot | Worldwide Digital Services Simulator"
+    />
+    <meta
+      name="description"
+      content="Simulate in seconds the price of several digital services, as Websites, Online Stores, Google Services and many others. Simulate now and receive as many proposals as you want."
+    />
+    <title>Digiquot | Worldwide Digital Services Simulator</title>
+    <link rel="shortcut icon" type="image/jpg" href="/imgs/Favicon.png" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-WN3NZK9');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-WN3NZK9"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-HTBRKHNHPW"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-HTBRKHNHPW');
+    </script>
+  </head>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-HTBRKHNHPW"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-HTBRKHNHPW');
+  </script>
+
+  <div class="choose-lang"></div>
+  <body>
+    <script>
+      AOS.init();
+    </script>
+    <nav>
+      <div class="logo">
+        <a href="/"
+          ><img src="/imgs/Logo_Digiquot_Horizontal_PNG.png" alt=""
+        /></a>
+      </div>
+      <ul class="nav-links">
+        <li><a id="special" href="#"><%=translation.simulate%></a></li>
+        <li><a href="#"><%=translation.whoWeAre%></a></li>
+        <li><a href="#"><%=translation.goals%></a></li>
+        <li><a href="/contacts"><%=translation.contacts%></a></li>
+
+        <li>
+          <select
+            class="langs-dropdown"
+            name="langs"
+            id="langs"
+            onchange="location = this.value;"
+          >
+            <option class="hide langs-dropdown" disabled selected>
+              &#xf7a2;
+            </option>
+            <option value="/terms/pt">Portuguese</option>
+            <option value="/terms">English</option>
+          </select>
+        </li>
+      </ul>
+
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+  </body>
+</html>
