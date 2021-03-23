@@ -9,6 +9,10 @@ const seoSchema = new mongoose.Schema({
   improvement: String,
   contentCreation: String,
   langs: Number,
+  createdAt: {
+    type: Date,
+    default: Date.now(), // This returns the date current date in mili seconds but mongo converts it into readable human format!
+  },
 });
 
 const seo = mongoose.model('seo', seoSchema);

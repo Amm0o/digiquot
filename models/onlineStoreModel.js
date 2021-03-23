@@ -12,6 +12,10 @@ const onlineStoreSchema = new mongoose.Schema({
   langs: String,
   payment: String,
   billing: String,
+  createdAt: {
+    type: Date,
+    default: Date.now(), // This returns the date current date in mili seconds but mongo converts it into readable human format!
+  },
 });
 
 const onlineStore = mongoose.model('onlinestores', onlineStoreSchema);

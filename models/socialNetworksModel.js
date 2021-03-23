@@ -9,6 +9,10 @@ const socialNetworksSchema = new mongoose.Schema({
   posts: Number,
   interaction: String,
   publicityManagment: String,
+  createdAt: {
+    type: Date,
+    default: Date.now(), // This returns the date current date in mili seconds but mongo converts it into readable human format!
+  },
 });
 
 const socialNetworks = mongoose.model('socialnetworks', socialNetworksSchema);
