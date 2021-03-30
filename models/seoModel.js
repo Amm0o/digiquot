@@ -13,6 +13,8 @@ const seoSchema = new mongoose.Schema({
     type: Date,
     default: Date.now(), // This returns the date current date in mili seconds but mongo converts it into readable human format!
   },
+  priceAgency: String,
+  priceFree: String,
 });
 
 const seo = mongoose.model('seo', seoSchema);
