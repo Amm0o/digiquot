@@ -101,8 +101,8 @@ exports.addService = async (req, res) => {
       email: req.body.client.email,
       message: req.body.client.message,
       tipologia: req.body.logo.tipologia,
-      priceAgency: +req.body.agency.cost,
-      priceFree: +req.body.freelancer.cost,
+      priceAgency: req.body.agency.cost,
+      priceFree: req.body.freelancer.cost,
     };
 
     try {
@@ -141,8 +141,8 @@ exports.addService = async (req, res) => {
       langs: +req.body.onlineStore.langs,
       payment: req.body.onlineStore.payment,
       billing: req.body.onlineStore.billing,
-      priceAgency: +req.body.agency.cost,
-      priceFree: +req.body.freelancer.cost,
+      priceAgency: req.body.agency.cost,
+      priceFree: req.body.freelancer.cost,
     };
     try {
       const newOnlineStore = await onlineStore.create(inComingService);
@@ -184,8 +184,8 @@ exports.addService = async (req, res) => {
       posts: +req.body.socialNetwork.posts,
       interaction: req.body.socialNetwork.interaction,
       publicityManagment: req.body.socialNetwork.publicityManagment,
-      priceAgency: +req.body.agency.cost,
-      priceFree: +req.body.freelancer.cost,
+      priceAgency: req.body.agency.cost,
+      priceFree: req.body.freelancer.cost,
     };
     try {
       const newSocialNetwork = await socialNetwork.create(inComingService);
@@ -220,8 +220,8 @@ exports.addService = async (req, res) => {
       improvement: req.body.seo.improvement,
       contentCreation: req.body.seo.contentCreation,
       langs: +req.body.seo.langs,
-      priceAgency: +req.body.agency.cost,
-      priceFree: +req.body.freelancer.cost,
+      priceAgency: req.body.agency.cost,
+      priceFree: req.body.freelancer.cost,
     };
     try {
       const newGoogleSeo = await seo.create(inComingService);
@@ -255,8 +255,8 @@ exports.addService = async (req, res) => {
       countries: +req.body.googleAds.countries,
       management: req.body.googleAds.management,
       reports: req.body.googleAds.reports,
-      priceAgency: +req.body.agency.cost,
-      priceFree: +req.body.freelancer.cost,
+      priceAgency: req.body.agency.cost,
+      priceFree: req.body.freelancer.cost,
     };
     try {
       const newGoogleAds = await googleAds.create(inComingService);
@@ -291,8 +291,8 @@ exports.addService = async (req, res) => {
       pentesting: req.body.cyber.pentesting,
       renew: req.body.cyber.renew,
       simulate: req.body.cyber.simulate,
-      priceAgency: +req.body.agency.cost,
-      priceFree: +req.body.freelancer.cost,
+      priceAgency: req.body.agency.cost,
+      priceFree: req.body.freelancer.cost,
     };
     try {
       const newCyber = await cyber.create(inComingService);
