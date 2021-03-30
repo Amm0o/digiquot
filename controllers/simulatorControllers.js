@@ -66,8 +66,8 @@ exports.addService = async (req, res) => {
       domainHosting: req.body.website.domainHosting,
       emails: req.body.website.emails,
       langs: +req.body.website.langs,
-      priceAgency: +req.body.agency.cost,
-      priceFree: +req.body.freelancer.cost,
+      priceAgency: req.body.agency.cost,
+      priceFree: req.body.freelancer.cost,
     };
 
     try {
