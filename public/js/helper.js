@@ -945,14 +945,6 @@ $('#continuar-step-4-logo').click(() => {
     serviceData.agency.cost = `${Math.round(
       serviceData.agency.cost * mult
     )}${currency}`;
-    $('#agency-cost').text(
-      `${Math.round(serviceData.agency.cost * mult)} ~ ${Math.round(
-        serviceData.agency.cost * mult * 1.15
-      )} ${currency}`
-    );
-    serviceData.agency.cost = `${Math.round(
-      serviceData.agency.cost * mult
-    )}${currency}`;
   } else if (serviceData.service === 'Google Ads') {
     $('#agency-cost').text(
       `${Math.round(serviceData.agency.cost * mult)} ~ ${Math.round(
