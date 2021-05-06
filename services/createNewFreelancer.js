@@ -1,17 +1,11 @@
 const freelancer = require('../models/freeLancerModel');
 
-exports.createFreelancer = (name, email, pt, br, uk, au, es, pol, usa, uae) => {
+exports.createFreelancer = (name, email, countries, services) => {
   const freelancerObj = {
     name: name,
     email: email,
-    pt: pt,
-    br: br,
-    uk: uk,
-    au: au,
-    es: es,
-    pol: pol,
-    usa: usa,
-    uae: uae,
+    bannedCountries: countries,
+    bannedServices: services,
   };
   const newFreelancer = freelancer.create(freelancerObj);
 };

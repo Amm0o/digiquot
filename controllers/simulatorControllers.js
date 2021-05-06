@@ -9,42 +9,55 @@ const agency = require('../models/agencyModel');
 const freelancer = require('../models/freeLancerModel');
 const Email = require('../services/mailer');
 
-async function sendEmails(inComingService, free, age, service) {
-  // Freelancer emails
+async function sendEmails(inComingService, free, age, service, countrie) {
+  // Agency emails
   if (inComingService.email) {
     if (age > 0) {
-      const emails = await agency.find({}, 'email -_id');
-      let emailArr = [];
-      console.log(emails);
+      // Get all agencies
+      const emails = await agency.find({});
+
       emails.forEach(async element => {
-        emailArr.push(element.email);
+        // Get Current agency
         const email = await element;
-        await new Email(email, service, inComingService).sendNewSimulation();
-        await new Email(
-          inComingService.email,
-          service,
-          inComingService
-        ).sendNewSimulationClient();
+
+        // Check for bans
+        if (
+          email.bannedServices.includes(service) ||
+          email.bannedCountries.includes(countrie)
+        ) {
+          return;
+        } else {
+          // Send email
+          await new Email(
+            email.email,
+            service,
+            inComingService
+          ).sendNewSimulation();
+        }
       });
     }
-    // Agency Emails
+    // Freelancer Emails
     if (free > 0) {
-      const emailsFree = await freelancer.find({}, 'email -_id');
-      let emailArrFree = [];
+      const emailsFree = await freelancer.find({});
       emailsFree.forEach(async element => {
-        emailArrFree.push(element.email);
+        // Get current Freelancer
         const email = await element;
-        await new Email(
-          email,
-          service,
-          inComingService
-        ).sendNewSimulationFree();
+
+        // Check for bans
+        if (
+          email.bannedServices.includes(service) ||
+          email.bannedCountries.includes(countrie)
+        ) {
+          return;
+        } else {
+          // Send the email
+          await new Email(
+            email.email,
+            service,
+            inComingService
+          ).sendNewSimulationFree();
+        }
       });
-      await new Email(
-        inComingService.email,
-        service,
-        inComingService
-      ).sendNewSimulationClient();
     }
   }
 }
@@ -82,7 +95,8 @@ exports.addService = async (req, res) => {
         inComingService,
         req.body.freelancer.quant,
         req.body.agency.quant,
-        req.body.service
+        req.body.service,
+        req.body.country
       );
       console.log(newWebSite);
     } catch (err) {
@@ -117,7 +131,8 @@ exports.addService = async (req, res) => {
         inComingService,
         req.body.freelancer.quant,
         req.body.agency.quant,
-        req.body.service
+        req.body.service,
+        req.body.country
       );
     } catch (err) {
       console.log(err);
@@ -155,7 +170,8 @@ exports.addService = async (req, res) => {
         inComingService,
         req.body.freelancer.quant,
         req.body.agency.quant,
-        req.body.service
+        req.body.service,
+        req.body.country
       );
       console.log(newOnlineStore);
       const arr = [
@@ -198,7 +214,8 @@ exports.addService = async (req, res) => {
         inComingService,
         req.body.freelancer.quant,
         req.body.agency.quant,
-        req.body.service
+        req.body.service,
+        req.body.country
       );
       console.log(newSocialNetwork);
     } catch (err) {
@@ -234,7 +251,8 @@ exports.addService = async (req, res) => {
         inComingService,
         req.body.freelancer.quant,
         req.body.agency.quant,
-        req.body.service
+        req.body.service,
+        req.body.country
       );
       console.log(newGoogleSeo);
     } catch (err) {
@@ -269,7 +287,8 @@ exports.addService = async (req, res) => {
         inComingService,
         req.body.freelancer.quant,
         req.body.agency.quant,
-        req.body.service
+        req.body.service,
+        req.body.country
       );
       console.log(newGoogleAds);
     } catch (err) {
@@ -305,7 +324,8 @@ exports.addService = async (req, res) => {
         inComingService,
         req.body.freelancer.quant,
         req.body.agency.quant,
-        req.body.service
+        req.body.service,
+        req.body.country
       );
       console.log(newCyber);
     } catch (err) {
