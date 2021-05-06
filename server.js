@@ -31,12 +31,12 @@ test();
 //   // ['Logotipo']
 // );
 // createAgency.createAgency('angelo', 'angelo.oliveira@pelicanbay.pt', [], []);
-createAgency.createAgency(
-  'hello',
-  'hello@projectantonio.pt',
-  ['Poland'],
-  ['Google SEO', 'Cyber Security']
-);
+// createAgency.createAgency(
+//   'hello',
+//   'hello@projectantonio.pt',
+//   ['Poland'],
+//   ['Google SEO', 'Cyber Security']
+// );
 // 1) Start the server
 const port = 3000;
 
