@@ -17,12 +17,12 @@ mongoose
   })
   .then(() => console.log('DB connection successful!'));
 
-const test = async () => {
-  const test = await freelancer.find({});
-  console.log(test[0].bannedCountries);
-};
+// const test = async () => {
+//   const test = await freelancer.find({});
+//   console.log(test[0].bannedCountries);
+// };
 
-test();
+// test();
 
 // createFreelancer.createFreelancer(
 //   'Angelo2',
