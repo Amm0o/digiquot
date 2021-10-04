@@ -15,6 +15,7 @@ const cyberSchema = new mongoose.Schema({
   },
   priceAgency: String,
   priceFree: String,
+  sentTo: [String],
 });
 
 const cyber = mongoose.model('cyber', cyberSchema);

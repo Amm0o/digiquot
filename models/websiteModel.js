@@ -17,6 +17,7 @@ const websiteSchema = new mongoose.Schema({
   },
   priceAgency: String,
   priceFree: String,
+  sentTo: [String],
 });
 
 const Website = mongoose.model('websites', websiteSchema);

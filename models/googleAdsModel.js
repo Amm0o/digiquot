@@ -14,6 +14,7 @@ const googleAdsSchema = new mongoose.Schema({
   },
   priceAgency: String,
   priceFree: String,
+  sentTo: [String],
 });
 
 const googleAds = mongoose.model('googleads', googleAdsSchema);

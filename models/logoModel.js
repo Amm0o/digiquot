@@ -12,6 +12,7 @@ const logotipoSchema = new mongoose.Schema({
   },
   priceAgency: String,
   priceFree: String,
+  sentTo: [String],
 });
 
 const Logotipo = mongoose.model('logotipos', logotipoSchema);

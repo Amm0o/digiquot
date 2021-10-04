@@ -15,6 +15,7 @@ const seoSchema = new mongoose.Schema({
   },
   priceAgency: String,
   priceFree: String,
+  sentTo: [String],
 });
 
 const seo = mongoose.model('seo', seoSchema);

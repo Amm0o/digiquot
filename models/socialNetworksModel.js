@@ -15,6 +15,7 @@ const socialNetworksSchema = new mongoose.Schema({
   },
   priceAgency: String,
   priceFree: String,
+  sentTo: [String],
 });
 
 const socialNetworks = mongoose.model('socialnetworks', socialNetworksSchema);

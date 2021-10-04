@@ -18,6 +18,7 @@ const onlineStoreSchema = new mongoose.Schema({
   },
   priceAgency: String,
   priceFree: String,
+  sentTo: [String],
 });
 
 const onlineStore = mongoose.model('onlinestores', onlineStoreSchema);

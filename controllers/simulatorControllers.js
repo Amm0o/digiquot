@@ -8,6 +8,7 @@ const cyber = require('../models/cyberModel');
 const agency = require('../models/agencyModel');
 const freelancer = require('../models/freeLancerModel');
 const Email = require('../services/mailer');
+const sentMails = require('../services/sentMail');
 
 async function sendEmails(inComingService, free, age, service, countrie) {
   // Agency emails
@@ -81,6 +82,7 @@ exports.addService = async (req, res) => {
       langs: +req.body.website.langs,
       priceAgency: req.body.agency.cost,
       priceFree: req.body.freelancer.cost,
+      sentTo: await sentMails.sentMail(req.body.country, req.body.service),
     };
 
     try {
@@ -117,6 +119,7 @@ exports.addService = async (req, res) => {
       tipologia: req.body.logo.tipologia,
       priceAgency: req.body.agency.cost,
       priceFree: req.body.freelancer.cost,
+      sentTo: await sentMails.sentMail(req.body.country, req.body.service),
     };
 
     try {
@@ -132,7 +135,7 @@ exports.addService = async (req, res) => {
         req.body.freelancer.quant,
         req.body.agency.quant,
         req.body.service,
-        req.body.country
+        'Logotipo'
       );
     } catch (err) {
       console.log(err);
@@ -158,6 +161,7 @@ exports.addService = async (req, res) => {
       billing: req.body.onlineStore.billing,
       priceAgency: req.body.agency.cost,
       priceFree: req.body.freelancer.cost,
+      sentTo: await sentMails.sentMail(req.body.country, req.body.service),
     };
     try {
       const newOnlineStore = await onlineStore.create(inComingService);
@@ -202,6 +206,7 @@ exports.addService = async (req, res) => {
       publicityManagment: req.body.socialNetwork.publicityManagment,
       priceAgency: req.body.agency.cost,
       priceFree: req.body.freelancer.cost,
+      sentTo: await sentMails.sentMail(req.body.country, req.body.service),
     };
     try {
       const newSocialNetwork = await socialNetwork.create(inComingService);
@@ -239,6 +244,7 @@ exports.addService = async (req, res) => {
       langs: +req.body.seo.langs,
       priceAgency: req.body.agency.cost,
       priceFree: req.body.freelancer.cost,
+      sentTo: await sentMails.sentMail(req.body.country, req.body.service),
     };
     try {
       const newGoogleSeo = await seo.create(inComingService);
@@ -275,6 +281,7 @@ exports.addService = async (req, res) => {
       reports: req.body.googleAds.reports,
       priceAgency: req.body.agency.cost,
       priceFree: req.body.freelancer.cost,
+      sentTo: await sentMails.sentMail(req.body.country, req.body.service),
     };
     try {
       const newGoogleAds = await googleAds.create(inComingService);
@@ -312,6 +319,7 @@ exports.addService = async (req, res) => {
       simulate: req.body.cyber.simulate,
       priceAgency: req.body.agency.cost,
       priceFree: req.body.freelancer.cost,
+      sentTo: await sentMails.sentMail(req.body.country, req.body.service),
     };
     try {
       const newCyber = await cyber.create(inComingService);
